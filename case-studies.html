@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Studies — Samuel Peter | GoHighLevel & Marketing Automation Results</title>
+  <meta name="description" content="Real results from real clients. See how Samuel Peter helped businesses in the US, UK & Canada fix their CRM, automate follow-ups, and scale with GoHighLevel."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    /* TOOLS BAR */
+    .tools-bar { background: var(--dark); padding: 3rem 0; }
+    .tools-bar-title { text-align:center; font-size:0.72rem; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:2rem; }
+    .tools-grid { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:2rem; }
+    .tool-item { display:flex; flex-direction:column; align-items:center; gap:0.6rem; opacity:0.7; transition:opacity 0.3s; }
+    .tool-item:hover { opacity:1; }
+    .tool-logo { width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; }
+    .tool-name { font-size:0.7rem; color:rgba(255,255,255,0.5); letter-spacing:1px; text-transform:uppercase; }
+
+    /* CASE STUDY CARDS */
+    .cs-hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:3rem; }
+    .cs-featured { grid-column:1/-1; background:white; border:1px solid var(--border); border-radius:16px; overflow:hidden; display:grid; grid-template-columns:1.2fr 1fr; }
+    .cs-featured-img { background:linear-gradient(135deg, #1B4FD8, #0D1117); padding:3rem; display:flex; align-items:center; justify-content:center; min-height:380px; position:relative; overflow:hidden; }
+    .cs-featured-img::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 30% 50%, rgba(255,255,255,0.05), transparent); }
+    .cs-metric-big { text-align:center; color:white; }
+    .cs-metric-big .num { font-family:'Playfair Display',serif; font-size:5rem; font-weight:700; line-height:1; color:#7B9EFF; }
+    .cs-metric-big .label { font-size:1rem; opacity:0.8; margin-top:0.5rem; }
+    .cs-featured-body { padding:3rem; }
+    .cs-tag { display:inline-block; background:var(--blue-light); color:var(--blue); padding:0.3rem 0.9rem; border-radius:20px; font-size:0.72rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:1rem; }
+    .cs-featured-body h2 { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; line-height:1.25; margin-bottom:1rem; }
+    .cs-featured-body .challenge { background:var(--light); border-left:3px solid var(--blue); padding:1rem 1.2rem; border-radius:0 8px 8px 0; margin:1.2rem 0; font-size:0.88rem; color:var(--text-muted); line-height:1.7; }
+    .cs-metrics-row { display:flex; gap:1.5rem; margin:1.5rem 0; flex-wrap:wrap; }
+    .cs-metric { background:var(--blue-light); padding:0.8rem 1.2rem; border-radius:8px; text-align:center; }
+    .cs-metric .m-num { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; color:var(--blue); line-height:1; }
+    .cs-metric .m-label { font-size:0.68rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-top:0.2rem; }
+    .cs-tools-used { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:1rem; }
+    .cs-tool-tag { background:var(--dark); color:rgba(255,255,255,0.8); padding:0.25rem 0.7rem; border-radius:4px; font-size:0.72rem; font-weight:500; }
+
+    /* REGULAR CASE STUDY CARDS */
+    .cs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .cs-card { background:white; border:1px solid var(--border); border-radius:16px; overflow:hidden; transition:transform 0.3s, box-shadow 0.3s; }
+    .cs-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+    .cs-card-top { padding:2rem 2rem 1rem; background:linear-gradient(135deg, var(--blue), #1440B0); color:white; position:relative; overflow:hidden; }
+    .cs-card-top::before { content:''; position:absolute; top:-20px; right:-20px; width:100px; height:100px; background:rgba(255,255,255,0.05); border-radius:50%; }
+    .cs-card-industry { font-size:0.68rem; letter-spacing:2px; text-transform:uppercase; opacity:0.7; margin-bottom:0.5rem; }
+    .cs-card-top h3 { font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; line-height:1.3; }
+    .cs-card-result { background:rgba(255,255,255,0.15); border-radius:8px; padding:0.8rem 1rem; margin-top:1rem; display:inline-flex; align-items:center; gap:0.5rem; }
+    .cs-card-result .r-num { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; line-height:1; }
+    .cs-card-result .r-label { font-size:0.72rem; opacity:0.85; line-height:1.3; }
+    .cs-card-body { padding:1.8rem; }
+    .cs-card-body .problem { font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:0.4rem; }
+    .cs-card-body p { font-size:0.88rem; color:var(--text-muted); line-height:1.7; margin-bottom:1rem; }
+    .cs-card-steps { display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1.2rem; }
+    .cs-step { display:flex; align-items:flex-start; gap:0.7rem; font-size:0.83rem; color:var(--text); }
+    .cs-step-num { width:20px; height:20px; background:var(--blue); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.65rem; font-weight:700; flex-shrink:0; margin-top:1px; }
+    .cs-bottom-metrics { display:flex; gap:1rem; border-top:1px solid var(--border); padding-top:1rem; flex-wrap:wrap; }
+    .cs-bm { font-size:0.75rem; color:var(--text-muted); }
+    .cs-bm span { display:block; font-weight:700; color:var(--blue); font-size:0.95rem; }
+
+    /* PROCESS SECTION */
+    .process-timeline { display:flex; flex-direction:column; gap:0; max-width:800px; margin:0 auto; }
+    .pt-step { display:grid; grid-template-columns:80px 1fr; gap:2rem; padding:2.5rem 0; border-bottom:1px solid var(--border); position:relative; }
+    .pt-step:last-child { border-bottom:none; }
+    .pt-num { font-family:'Playfair Display',serif; font-size:3rem; font-weight:700; color:var(--blue); opacity:0.2; line-height:1; }
+    .pt-content h3 { font-size:1.05rem; font-weight:700; margin-bottom:0.5rem; color:var(--blue); }
+    .pt-content p { color:var(--text-muted); line-height:1.8; font-size:0.9rem; }
+
+    /* RESULTS TICKER */
+    .results-ticker { background:var(--blue); padding:1.5rem 0; overflow:hidden; }
+    .ticker-inner { display:flex; gap:4rem; animation:ticker 25s linear infinite; white-space:nowrap; }
+    .ticker-item { color:white; font-size:0.88rem; font-weight:500; display:flex; align-items:center; gap:0.8rem; flex-shrink:0; }
+    .ticker-item strong { font-family:'Playfair Display',serif; font-size:1.1rem; }
+    @keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    @media(max-width:1024px) {
+      .cs-featured { grid-template-columns:1fr; }
+      .cs-featured-img { min-height:200px; }
+      .cs-grid { grid-template-columns:1fr; }
+      .cs-hero-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Samuel<span>Peter</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="case-studies.html" class="active">Case Studies</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary">Book a Free Call</a>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-tag">Case Studies</div>
+      <h1>Real Businesses.<br/><em>Real Results.</em></h1>
+      <p>Detailed breakdowns of how I've helped coaches, agencies, and service businesses in the US, UK & Canada fix their systems and scale with confidence.</p>
+    </div>
+  </section>
+
+  <!-- RESULTS TICKER -->
+  <div class="results-ticker">
+    <div class="ticker-inner">
+      <div class="ticker-item">⚡ <strong>↑300%</strong> Lead Follow-up Rate</div>
+      <div class="ticker-item">📧 <strong>47%</strong> Email Open Rate</div>
+      <div class="ticker-item">🚀 <strong>4x</strong> Lead Volume Increase</div>
+      <div class="ticker-item">⏱ <strong>5 min</strong> Response Time</div>
+      <div class="ticker-item">💰 <strong>↑52%</strong> Revenue from Email</div>
+      <div class="ticker-item">🤖 <strong>24/7</strong> Automated Follow-up</div>
+      <div class="ticker-item">⭐ <strong>5.0</strong> Fiverr Rating</div>
+      <div class="ticker-item">✅ <strong>50+</strong> Clients Served</div>
+      <!-- duplicate for seamless loop -->
+      <div class="ticker-item">⚡ <strong>↑300%</strong> Lead Follow-up Rate</div>
+      <div class="ticker-item">📧 <strong>47%</strong> Email Open Rate</div>
+      <div class="ticker-item">🚀 <strong>4x</strong> Lead Volume Increase</div>
+      <div class="ticker-item">⏱ <strong>5 min</strong> Response Time</div>
+      <div class="ticker-item">💰 <strong>↑52%</strong> Revenue from Email</div>
+      <div class="ticker-item">🤖 <strong>24/7</strong> Automated Follow-up</div>
+      <div class="ticker-item">⭐ <strong>5.0</strong> Fiverr Rating</div>
+      <div class="ticker-item">✅ <strong>50+</strong> Clients Served</div>
+    </div>
+  </div>
+
+  <!-- TOOLS BAR -->
+  <div class="tools-bar">
+    <div class="container">
+      <p class="tools-bar-title">Tools & Platforms I Work With</p>
+      <div class="tools-grid">
+        <!-- GoHighLevel -->
+        <div class="tool-item">
+          <div class="tool-logo" style="background:#FF6B35;">
+            <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="20" fill="#FF6B35"/><text x="50%" y="55%" font-size="14" fill="white" text-anchor="middle" dominant-baseline="middle" font-weight="bold">GHL</text></svg>
+          </div>
+          <span class="tool-name">GoHighLevel</span>
+        </div>
+        <!-- Zapier -->
+        <div class="tool-item">
+          <div class="tool-logo" style="background:#FF4A00;">
+            <svg width="28" height="28" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#FF4A00"/><text x="50%" y="55%" font-size="11" fill="white" text-anchor="middle" dominant-baseline="middle" font-weight="bold">ZAP</text></svg>
+          </div>
+          <span class="tool-name">Zapier</span>
+        </div>
+        <!-- Beehiiv -->
+        <div class="tool-item">
+          <div class="tool-logo" style="background:#1A1A1A;">
+            <svg width="28" height="28" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#1A1A1A"/><text x="50%" y="55%" font-size="10" fill="#FFD700" text-anchor="middle" dominant-baseline="middle" font-weight="bold">BEE</text></svg>
+          </div>
+          <span class="tool-name">Beehiiv</span>
+        </div>
+        <!-- Make -->
+        <div class="tool-item">
+          <div class="tool-logo" style="background:#6D00CC;">
+            <svg width="28" height="28" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#6D00CC"/><text x="50%" y="55%" font-size="10" fill="white" text-anchor="middle" dominant-baseline="middle" font-weight="bold">MAKE</text></svg>
+          </div>
+          <span class="tool-name">Make</span>
+        </div>
+        <!-- Calendly -->
+        <div class="tool-item">
+          <div class="tool-logo" style="background:#006BFF;">
+            <svg width="28" height="28" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#006BFF"/><text x="50%" y="55%" font-size="9" fill="white" text-anchor="middle" dominant-baseline="middle" font-weight="bold">CAL</text></svg>
+          </div>
+          <span class="tool-name">Calendly</span>
+        </div>
+        <!-- Pabbly -->
+        <div class="tool-item">
+          <div class="tool-logo" style="background:#E74C3C;">
+            <svg width="28" height="28" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#E74C3C"/><text x="50%" y="55%" font-size="9" fill="white" text-anchor="middle" dominant-baseline="middle" font-weight="bold">PAB</text></svg>
+          </div>
+          <span class="tool-name">Pabbly</span>
+        </div>
+        <!-- HubSpot -->
+        <div class="tool-item">
+          <div class="tool-logo" style="background:#FF7A59;">
+            <svg width="28" height="28" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#FF7A59"/><text x="50%" y="55%" font-size="9" fill="white" text-anchor="middle" dominant-baseline="middle" font-weight="bold">HUB</text></svg>
+          </div>
+          <span class="tool-name">HubSpot</span>
+        </div>
+        <!-- WordPress -->
+        <div class="tool-item">
+          <div class="tool-logo" style="background:#21759B;">
+            <svg width="28" height="28" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#21759B"/><text x="50%" y="55%" font-size="9" fill="white" text-anchor="middle" dominant-baseline="middle" font-weight="bold">WP</text></svg>
+          </div>
+          <span class="tool-name">WordPress</span>
+        </div>
+        <!-- Klaviyo -->
+        <div class="tool-item">
+          <div class="tool-logo" style="background:#000000;">
+            <svg width="28" height="28" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#000000"/><text x="50%" y="55%" font-size="9" fill="#00FF94" text-anchor="middle" dominant-baseline="middle" font-weight="bold">KLA</text></svg>
+          </div>
+          <span class="tool-name">Klaviyo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED CASE STUDY -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Featured Case Study</div>
+        <h2>From Broken Automation to<br/><em>300% More Follow-ups</em></h2>
+      </div>
+
+      <div class="cs-featured reveal">
+        <div class="cs-featured-img">
+          <div class="cs-metric-big">
+            <div class="num">300%</div>
+            <div class="label">Increase in Lead Follow-up Rate</div>
+            <div style="display:flex;gap:1.5rem;justify-content:center;margin-top:2rem;">
+              <div style="text-align:center;color:white;">
+                <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#7B9EFF;">24hrs</div>
+                <div style="font-size:0.72rem;opacity:0.7;margin-top:0.3rem;">↓ to 5 minutes</div>
+              </div>
+              <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
+              <div style="text-align:center;color:white;">
+                <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#7B9EFF;">100%</div>
+                <div style="font-size:0.72rem;opacity:0.7;margin-top:0.3rem;">Leads followed up</div>
+              </div>
+              <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
+              <div style="text-align:center;color:white;">
+                <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#7B9EFF;">GHL</div>
+                <div style="font-size:0.72rem;opacity:0.7;margin-top:0.3rem;">Platform</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs-featured-body">
+          <div class="cs-tag">GoHighLevel · CRM Automation</div>
+          <h2>Coaching Business Gets a Fully Automated Lead Pipeline</h2>
+          <div class="challenge">
+            <strong>The Problem:</strong> A US-based business coach was paying for leads every month but losing most of them because nobody was following up fast enough. Their GHL account was half-set up, pipelines were a mess, and automated workflows kept failing silently.
+          </div>
+          <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.8;"><strong>What I Did:</strong> I audited their entire GHL account, rebuilt the pipeline from scratch, set up proper lead stages, and created automated follow-up sequences that triggered immediately when a lead came in — via SMS, email, and voicemail drops.</p>
+          <div class="cs-metrics-row">
+            <div class="cs-metric"><div class="m-num">↑300%</div><div class="m-label">Follow-up Rate</div></div>
+            <div class="cs-metric"><div class="m-num">5 min</div><div class="m-label">Response Time</div></div>
+            <div class="cs-metric"><div class="m-num">0</div><div class="m-label">Leads Lost</div></div>
+            <div class="cs-metric"><div class="m-num">2 wks</div><div class="m-label">Delivery Time</div></div>
+          </div>
+          <div class="cs-tools-used">
+            <span class="cs-tool-tag">GoHighLevel</span>
+            <span class="cs-tool-tag">CRM Automation</span>
+            <span class="cs-tool-tag">SMS Automation</span>
+            <span class="cs-tool-tag">Email Sequences</span>
+            <span class="cs-tool-tag">Pipeline Setup</span>
+          </div>
+          <br/>
+          <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary">Get Similar Results →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE CASE STUDIES -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">More Results</div>
+        <h2>More Client Wins Across<br/><em>Different Industries</em></h2>
+      </div>
+      <div class="cs-grid">
+
+        <!-- CASE STUDY 2 -->
+        <div class="cs-card reveal">
+          <div class="cs-card-top">
+            <div class="cs-card-industry">Email Marketing · US Client</div>
+            <h3>Digital Agency Email Sequence Rebuilt from Scratch</h3>
+            <div class="cs-card-result">
+              <div class="r-num">47%</div>
+              <div class="r-label">Open Rate<br/>(was 18%)</div>
+            </div>
+          </div>
+          <div class="cs-card-body">
+            <div class="problem">The Problem</div>
+            <p>A digital marketing agency had a 12-email onboarding sequence that was barely working. Open rates sat at 18%, click rates were near zero, and new clients were confused about next steps after signing up.</p>
+            <div class="cs-card-steps">
+              <div class="cs-step"><div class="cs-step-num">1</div>Audited all 12 emails — subject lines, copy, timing, and segmentation</div>
+              <div class="cs-step"><div class="cs-step-num">2</div>Rewrote every email with clear value and action-focused CTAs</div>
+              <div class="cs-step"><div class="cs-step-num">3</div>Fixed deliverability issues causing emails to land in spam</div>
+              <div class="cs-step"><div class="cs-step-num">4</div>Set up proper list segmentation and send-time optimization</div>
+            </div>
+            <div class="cs-bottom-metrics">
+              <div class="cs-bm"><span>47%</span>Open Rate</div>
+              <div class="cs-bm"><span>↑160%</span>Click Rate</div>
+              <div class="cs-bm"><span>1 week</span>Turnaround</div>
+            </div>
+            <div class="cs-tools-used" style="margin-top:1rem;">
+              <span class="cs-tool-tag">GoHighLevel</span><span class="cs-tool-tag">Email Automation</span><span class="cs-tool-tag">Beehiiv</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 3 -->
+        <div class="cs-card reveal">
+          <div class="cs-card-top" style="background:linear-gradient(135deg,#0D1117,#1B4FD8);">
+            <div class="cs-card-industry">AI Chatbot · Directory Platform</div>
+            <h3>AI Business Agent Deployed Across Entire Client Directory</h3>
+            <div class="cs-card-result">
+              <div class="r-num">24/7</div>
+              <div class="r-label">Automated<br/>Lead Qualification</div>
+            </div>
+          </div>
+          <div class="cs-card-body">
+            <div class="problem">The Problem</div>
+            <p>A business directory platform needed each listed business to have its own customer support — but hiring agents for every business was impossible. They needed an automated solution that felt personal.</p>
+            <div class="cs-card-steps">
+              <div class="cs-step"><div class="cs-step-num">1</div>Built a custom AI agent framework trained on each business's services</div>
+              <div class="cs-step"><div class="cs-step-num">2</div>Configured conversation flows for lead qualification and booking</div>
+              <div class="cs-step"><div class="cs-step-num">3</div>Integrated with GHL to auto-log leads into each business's CRM</div>
+              <div class="cs-step"><div class="cs-step-num">4</div>Deployed VIP and Premium tiers for different businesses</div>
+            </div>
+            <div class="cs-bottom-metrics">
+              <div class="cs-bm"><span>24/7</span>Coverage</div>
+              <div class="cs-bm"><span>100%</span>Auto Response</div>
+              <div class="cs-bm"><span>Multi</span>Business</div>
+            </div>
+            <div class="cs-tools-used" style="margin-top:1rem;">
+              <span class="cs-tool-tag">AI Agent</span><span class="cs-tool-tag">GoHighLevel</span><span class="cs-tool-tag">Zapier</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 4 -->
+        <div class="cs-card reveal">
+          <div class="cs-card-top" style="background:linear-gradient(135deg,#1440B0,#0D1117);">
+            <div class="cs-card-industry">Lead Generation · Real Estate</div>
+            <h3>Real Estate Agent Gets Automated Lead Pipeline with CRM Sync</h3>
+            <div class="cs-card-result">
+              <div class="r-num">↑4x</div>
+              <div class="r-label">Lead Volume<br/>in 30 Days</div>
+            </div>
+          </div>
+          <div class="cs-card-body">
+            <div class="problem">The Problem</div>
+            <p>A US real estate agency was manually tracking leads in spreadsheets. Leads from Zillow, website forms, and social media were all going to different places — and most were never followed up on properly.</p>
+            <div class="cs-card-steps">
+              <div class="cs-step"><div class="cs-step-num">1</div>Built a professional GHL landing page with integrated lead capture</div>
+              <div class="cs-step"><div class="cs-step-num">2</div>Connected all lead sources into one unified GHL pipeline</div>
+              <div class="cs-step"><div class="cs-step-num">3</div>Set up instant SMS + email follow-up for every new lead</div>
+              <div class="cs-step"><div class="cs-step-num">4</div>Built nurture sequences for long-term leads not ready to buy yet</div>
+            </div>
+            <div class="cs-bottom-metrics">
+              <div class="cs-bm"><span>↑4x</span>Lead Volume</div>
+              <div class="cs-bm"><span>38%</span>Conversion</div>
+              <div class="cs-bm"><span>GHL</span>Platform</div>
+            </div>
+            <div class="cs-tools-used" style="margin-top:1rem;">
+              <span class="cs-tool-tag">GoHighLevel</span><span class="cs-tool-tag">Landing Page</span><span class="cs-tool-tag">CRM Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 5 -->
+        <div class="cs-card reveal">
+          <div class="cs-card-top" style="background:linear-gradient(135deg,#6D00CC,#1B4FD8);">
+            <div class="cs-card-industry">Email Marketing · E-Commerce</div>
+            <h3>E-Commerce Brand Generates 52% of Revenue Through Email</h3>
+            <div class="cs-card-result">
+              <div class="r-num">↑52%</div>
+              <div class="r-label">Revenue from<br/>Email Channel</div>
+            </div>
+          </div>
+          <div class="cs-card-body">
+            <div class="problem">The Problem</div>
+            <p>An e-commerce brand was sending the same generic newsletter to their entire list every week. No segmentation, no automation, no strategy. Revenue from email was nearly zero despite having a list of 8,000+ subscribers.</p>
+            <div class="cs-card-steps">
+              <div class="cs-step"><div class="cs-step-num">1</div>Segmented the list by purchase history, behaviour, and engagement</div>
+              <div class="cs-step"><div class="cs-step-num">2</div>Built welcome, abandon cart, and post-purchase automation flows</div>
+              <div class="cs-step"><div class="cs-step-num">3</div>Wrote monthly campaign calendars with targeted promotions</div>
+              <div class="cs-step"><div class="cs-step-num">4</div>Set up A/B testing on subject lines and send times</div>
+            </div>
+            <div class="cs-bottom-metrics">
+              <div class="cs-bm"><span>↑52%</span>Email Revenue</div>
+              <div class="cs-bm"><span>32%</span>Open Rate</div>
+              <div class="cs-bm"><span>Klaviyo</span>Platform</div>
+            </div>
+            <div class="cs-tools-used" style="margin-top:1rem;">
+              <span class="cs-tool-tag">Klaviyo</span><span class="cs-tool-tag">Email Automation</span><span class="cs-tool-tag">A/B Testing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 6 -->
+        <div class="cs-card reveal">
+          <div class="cs-card-top" style="background:linear-gradient(135deg,#FF7A59,#1B4FD8);">
+            <div class="cs-card-industry">CRM Migration · Service Business</div>
+            <h3>Service Business Migrated from HubSpot to GHL with Zero Data Loss</h3>
+            <div class="cs-card-result">
+              <div class="r-num">100%</div>
+              <div class="r-label">Data Migrated<br/>Successfully</div>
+            </div>
+          </div>
+          <div class="cs-card-body">
+            <div class="problem">The Problem</div>
+            <p>A UK service business was paying $800/month for HubSpot but only using 20% of its features. They wanted to move to GoHighLevel but were scared of losing 3 years of contact data, deals, and notes.</p>
+            <div class="cs-card-steps">
+              <div class="cs-step"><div class="cs-step-num">1</div>Exported and cleaned all HubSpot data — contacts, deals, notes</div>
+              <div class="cs-step"><div class="cs-step-num">2</div>Set up GHL account with identical pipeline stages and custom fields</div>
+              <div class="cs-step"><div class="cs-step-num">3</div>Migrated all data with zero loss using Zapier + Make</div>
+              <div class="cs-step"><div class="cs-step-num">4</div>Rebuilt all automation workflows natively in GHL</div>
+            </div>
+            <div class="cs-bottom-metrics">
+              <div class="cs-bm"><span>$800/mo</span>Saved</div>
+              <div class="cs-bm"><span>100%</span>Data Safe</div>
+              <div class="cs-bm"><span>2 wks</span>Migration</div>
+            </div>
+            <div class="cs-tools-used" style="margin-top:1rem;">
+              <span class="cs-tool-tag">HubSpot</span><span class="cs-tool-tag">GoHighLevel</span><span class="cs-tool-tag">Make</span><span class="cs-tool-tag">Zapier</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 7 -->
+        <div class="cs-card reveal">
+          <div class="cs-card-top" style="background:linear-gradient(135deg,#1A1A1A,#1B4FD8);">
+            <div class="cs-card-industry">Newsletter · Media Brand</div>
+            <h3>Newsletter Brand Gets Professional Email Design on Beehiiv</h3>
+            <div class="cs-card-result">
+              <div class="r-num">4 days</div>
+              <div class="r-label">Full Setup<br/>& Delivery</div>
+            </div>
+          </div>
+          <div class="cs-card-body">
+            <div class="problem">The Problem</div>
+            <p>A media brand was running their newsletter on a basic template that looked unprofessional. They needed a full Beehiiv setup with custom design, welcome automation, and subscriber segmentation.</p>
+            <div class="cs-card-steps">
+              <div class="cs-step"><div class="cs-step-num">1</div>Set up and configured their full Beehiiv account and custom domain</div>
+              <div class="cs-step"><div class="cs-step-num">2</div>Designed branded email templates matching their visual identity</div>
+              <div class="cs-step"><div class="cs-step-num">3</div>Built welcome sequence and subscriber onboarding automation</div>
+              <div class="cs-step"><div class="cs-step-num">4</div>Migrated existing subscriber list with full segmentation</div>
+            </div>
+            <div class="cs-bottom-metrics">
+              <div class="cs-bm"><span>4 days</span>Delivery</div>
+              <div class="cs-bm"><span>100%</span>Branded</div>
+              <div class="cs-bm"><span>Beehiiv</span>Platform</div>
+            </div>
+            <div class="cs-tools-used" style="margin-top:1rem;">
+              <span class="cs-tool-tag">Beehiiv</span><span class="cs-tool-tag">Email Design</span><span class="cs-tool-tag">Automation</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MY PROCESS -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">My Process</div>
+        <h2>How I Get These<br/><em>Results Every Time</em></h2>
+        <p>Every project follows the same proven process — no shortcuts, no guessing.</p>
+      </div>
+      <div class="process-timeline">
+        <div class="pt-step reveal">
+          <div class="pt-num">01</div>
+          <div class="pt-content">
+            <h3>Discovery Call (Free)</h3>
+            <p>We get on a 30-minute call and I ask the right questions — about your offer, your leads, what's breaking, and what success looks like for you. Most clients realize the problem is bigger than they thought. That's fine. That's exactly why you're talking to me.</p>
+          </div>
+        </div>
+        <div class="pt-step reveal">
+          <div class="pt-num">02</div>
+          <div class="pt-content">
+            <h3>Audit & Strategy</h3>
+            <p>I audit your current setup — CRM, automations, email sequences, landing pages. I map out exactly what's broken, what's missing, and what needs to be built. You get a clear action plan before I start building anything.</p>
+          </div>
+        </div>
+        <div class="pt-step reveal">
+          <div class="pt-num">03</div>
+          <div class="pt-content">
+            <h3>Build & Test</h3>
+            <p>I build everything — every workflow, every email, every page, every integration. Before I hand anything over I test it end to end with real scenarios so you know it works before any real leads touch it.</p>
+          </div>
+        </div>
+        <div class="pt-step reveal">
+          <div class="pt-num">04</div>
+          <div class="pt-content">
+            <h3>Handover & Support</h3>
+            <p>I walk you through everything I've built, make sure your team understands how it works, and stay available after delivery. If something breaks or doesn't behave as expected — I want to know about it immediately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <h2>Want Results Like These<br/>for Your Business?</h2>
+      <p>Book a free 30-minute discovery call and let's talk about what's broken in your system and how to fix it.</p>
+      <div class="cta-btns">
+        <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary large">Book a Free Discovery Call</a>
+        <a href="mailto:petersamuellex@gmail.com" class="btn-white large">Send an Email</a>
+      </div>
+      <p style="color:rgba(255,255,255,0.6);font-size:0.82rem;margin-top:1.5rem;">🇺🇸 US · 🇬🇧 UK · 🇨🇦 Canada · Available across all time zones</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Samuel<span>Peter</span></div>
+        <p>GoHighLevel Expert & Marketing Automation Specialist — helping businesses in the US, UK & Canada automate, grow, and scale.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/samuel-lex-/" target="_blank" class="linkedin" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="white"/></svg></a>
+          <a href="https://x.com/PeterSamue68242" target="_blank" class="twitter" title="Twitter/X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="white"/></svg></a>
+          <a href="https://wa.me/2348106433379" target="_blank" class="whatsapp" title="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="white"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="services.html">Email Marketing</a><a href="services.html">GoHighLevel</a><a href="services.html">CRM Automation</a><a href="services.html">Sales Funnels</a><a href="services.html">AI Chatbots</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="mailto:petersamuellex@gmail.com">petersamuellex@gmail.com</a>
+        <a href="https://wa.me/2348106433379">WhatsApp Me</a>
+        <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary" style="margin-top:1rem;display:inline-block">Book a Free Call</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© 2026 Samuel Peter. All rights reserved. · Serving US, UK & Canada</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2348106433379" style="position:fixed;bottom:2rem;right:2rem;z-index:999;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.3s;text-decoration:none;" target="_blank">💬</a>
+
+  <script src="main.js"></script>
+</body>
+</html>
