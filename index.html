@@ -455,45 +455,7 @@
 
   <script src="main.js"></script>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 
-// Custom behavior
-Tawk_API.onLoad = function(){
-  // Set visitor name placeholder
-  Tawk_API.setAttributes({
-    'name': 'Visitor',
-  }, function(error){});
-};
-
-// Show chat after 5 seconds
-Tawk_API.onBeforeLoad = function(){
-  Tawk_API.hideWidget();
-};
-
-setTimeout(function(){
-  if(typeof Tawk_API !== 'undefined' && Tawk_API.showWidget){
-    Tawk_API.showWidget();
-  }
-}, 5000);
-
-// Custom greeting based on time of day
-Tawk_API.onChatStarted = function(){
-  var hour = new Date().getHours();
-  var greeting = hour < 12 ? 'Good morning! 🌅' : hour < 17 ? 'Good afternoon! ☀️' : 'Good evening! 🌙';
-  console.log(greeting);
-};
-
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69a8d1ebd9992f1c3736469d/1jitn80gh';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+<script src="chatbot.js"></script>
 </body>
 </html>
