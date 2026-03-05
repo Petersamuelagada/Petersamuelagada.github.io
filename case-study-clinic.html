@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Study: Restorative Health & Wellness Clinic | Samuel Peter</title>
+  <meta name="description" content="How Samuel Peter built a complete website and landing page for a health clinic inside GoHighLevel — with automated follow-up and multi-section design."/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="stylesheet" href="main-style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    .cs-hero { background: linear-gradient(135deg, #0D4A3A 0%, #1B4FD8 100%); padding: 9rem 0 5rem; color: white; }
+    .cs-hero-inner { max-width: 800px; }
+    .cs-back { display: inline-flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-bottom: 2rem; transition: color 0.2s; }
+    .cs-back:hover { color: white; }
+    .cs-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .cs-tag { background: rgba(255,255,255,0.15); color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); }
+    .cs-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; }
+    .cs-hero h1 em { font-style: italic; color: #7BF7C0; }
+    .cs-hero-meta { display: flex; gap: 2rem; flex-wrap: wrap; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); }
+    .cs-meta-item span { display: block; font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.2rem; }
+    .cs-meta-item strong { font-size: 0.9rem; color: white; }
+    .cs-results-banner { background: white; border-radius: 20px; padding: 2.5rem; margin: -3rem 0 4rem; box-shadow: 0 20px 60px rgba(0,0,0,0.12); display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; position: relative; z-index: 10; }
+    .cs-result { text-align: center; padding: 1rem; border-right: 1px solid var(--border); }
+    .cs-result:last-child { border-right: none; }
+    .cs-result-num { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: var(--blue); line-height: 1; margin-bottom: 0.3rem; }
+    .cs-result-num.green { color: #16A34A; }
+    .cs-result-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+    .cs-content { max-width: 780px; margin: 0 auto; }
+    .cs-section { margin-bottom: 4rem; }
+    .cs-section h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.2rem; }
+    .cs-section h2 em { font-style: italic; color: var(--blue); }
+    .cs-section p { color: var(--text-muted); line-height: 1.85; margin-bottom: 1rem; font-size: 0.95rem; }
+    .cs-img-full { width: 100%; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); margin: 2rem 0; }
+    .cs-img-caption { text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: -1rem; margin-bottom: 2rem; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .feature-box { background: var(--light); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem; }
+    .feature-box h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .feature-box p { font-size: 0.82rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
+    .tools-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.5rem 0; }
+    .tool-badge { display: flex; align-items: center; gap: 0.5rem; background: var(--blue-light); border: 1px solid rgba(27,79,216,0.2); border-radius: 10px; padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 600; color: var(--blue); }
+    .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+    .ba-box { border-radius: 16px; padding: 1.5rem; }
+    .ba-box.before { background: #FFF5F5; border: 1px solid #FED7D7; }
+    .ba-box.after { background: #F0FDF4; border: 1px solid #BBF7D0; }
+    .ba-box h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
+    .ba-box.before h4 { color: #C53030; }
+    .ba-box.after h4 { color: #16A34A; }
+    .ba-item { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.7rem; font-size: 0.88rem; }
+    .ba-box.before .ba-item { color: #742A2A; }
+    .ba-box.after .ba-item { color: #14532D; }
+    .solution-steps { display: flex; flex-direction: column; gap: 0; margin: 1.5rem 0; }
+    .solution-step { display: grid; grid-template-columns: 60px 1fr; gap: 1.5rem; padding: 1.5rem 0; border-bottom: 1px solid var(--border); align-items: start; }
+    .solution-step:last-child { border-bottom: none; }
+    .step-num-circle { width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
+    .solution-step h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .solution-step p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin: 0; }
+    .cs-testimonial { background: linear-gradient(135deg, #0D4A3A, #1B4FD8); border-radius: 20px; padding: 2.5rem; margin: 3rem 0; text-align: center; }
+    .cs-testimonial p { font-size: 1.1rem; color: white; line-height: 1.7; font-style: italic; margin-bottom: 1.5rem; }
+    .cs-testimonial strong { color: white; display: block; }
+    .cs-testimonial span { color: rgba(255,255,255,0.7); font-size: 0.85rem; }
+    .cs-cta { background: var(--light); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 4rem; border: 1px solid var(--border); }
+    .cs-cta h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 0.8rem; }
+    .cs-cta p { color: var(--text-muted); margin-bottom: 1.5rem; }
+    .cs-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    @media(max-width:768px){ .cs-results-banner{grid-template-columns:repeat(2,1fr);} .feature-grid{grid-template-columns:1fr;} .before-after{grid-template-columns:1fr;} .cs-result{border-right:none;border-bottom:1px solid var(--border);} .cs-result:last-child{border-bottom:none;} }
+  </style>
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Samuel<span>Peter</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html" class="active">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      </nav>
+      <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary">Book a Free Call</a>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <section class="cs-hero">
+    <div class="container">
+      <div class="cs-hero-inner">
+        <a href="portfolio.html" class="cs-back">← Back to Portfolio</a>
+        <div class="cs-tags">
+          <span class="cs-tag">Landing Page</span>
+          <span class="cs-tag">GoHighLevel</span>
+          <span class="cs-tag">Health & Wellness</span>
+          <span class="cs-tag">Auto Follow-up</span>
+          <span class="cs-tag">Multi-Section</span>
+        </div>
+        <h1>Restorative Health &<br/><em>Wellness Clinic</em></h1>
+        <p style="color:rgba(255,255,255,0.75);font-size:1.05rem;line-height:1.7;margin-bottom:2rem;">A complete website and landing page for a health clinic — services showcase, team profiles, testimonials, partner logos, and automated lead follow-up — all built inside GoHighLevel.</p>
+        <div class="cs-hero-meta">
+          <div class="cs-meta-item"><span>Industry</span><strong>Health & Wellness</strong></div>
+          <div class="cs-meta-item"><span>Location</span><strong>🇺🇸 United States</strong></div>
+          <div class="cs-meta-item"><span>Timeline</span><strong>8 Days</strong></div>
+          <div class="cs-meta-item"><span>Platform</span><strong>GoHighLevel</strong></div>
+          <div class="cs-meta-item"><span>Rating</span><strong>⭐⭐⭐⭐⭐ 5.0</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white" style="padding-top:0;">
+    <div class="container">
+      <div class="cs-results-banner reveal">
+        <div class="cs-result"><div class="cs-result-num green">Full</div><div class="cs-result-label">Website Build</div></div>
+        <div class="cs-result"><div class="cs-result-num green">Auto</div><div class="cs-result-label">Lead Follow-up</div></div>
+        <div class="cs-result"><div class="cs-result-num green">Multi</div><div class="cs-result-label">Section Design</div></div>
+        <div class="cs-result"><div class="cs-result-num green">5★</div><div class="cs-result-label">Client Rating</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white" style="padding-top:2rem;">
+    <div class="container">
+      <div class="cs-content">
+
+        <!-- THE PROBLEM -->
+        <div class="cs-section reveal">
+          <h2>The <em>Problem</em></h2>
+          <p>A health and wellness clinic was operating without a proper online presence. Potential patients were searching for their services online but couldn't find them — or landed on an outdated, unprofessional page that didn't build trust.</p>
+          <p>They needed a <strong>complete website that looked credible, professional, and converted visitors into booked appointments</strong> — with automatic follow-up so no lead slipped through the cracks.</p>
+        </div>
+
+        <!-- PROJECT IMAGE -->
+        <div class="reveal">
+          <img src="mockup-clinic.jpg" alt="Restorative Health & Wellness Clinic" class="cs-img-full"/>
+          <p class="cs-img-caption">Restorative Health & Wellness Clinic — built inside GoHighLevel</p>
+        </div>
+
+        <!-- THE SOLUTION -->
+        <div class="cs-section reveal">
+          <h2>The <em>Solution</em></h2>
+          <p>I built a complete multi-section website inside GoHighLevel — designed to showcase the clinic's services, build trust with social proof, and convert visitors into booked appointments automatically.</p>
+          <div class="solution-steps">
+            <div class="solution-step">
+              <div class="step-num-circle">1</div>
+              <div>
+                <h4>Professional Hero Section</h4>
+                <p>Bold headline "Fueling Your Potential With Nutrition" with a strong CTA, professional photography, and trust-building elements above the fold.</p>
+              </div>
+            </div>
+            <div class="solution-step">
+              <div class="step-num-circle">2</div>
+              <div>
+                <h4>Services Showcase</h4>
+                <p>Complete services section showing all clinic offerings — massage therapy, neuromuscular therapy, restorative exercises — with clear descriptions and booking CTAs.</p>
+              </div>
+            </div>
+            <div class="solution-step">
+              <div class="step-num-circle">3</div>
+              <div>
+                <h4>Team Profiles Section</h4>
+                <p>Professional team member profiles with photos, qualifications, and specialities — building trust and personal connection with potential patients.</p>
+              </div>
+            </div>
+            <div class="solution-step">
+              <div class="step-num-circle">4</div>
+              <div>
+                <h4>Testimonials & Social Proof</h4>
+                <p>Real patient testimonials, star ratings, and partner logos — all designed to eliminate doubt and build credibility instantly.</p>
+              </div>
+            </div>
+            <div class="solution-step">
+              <div class="step-num-circle">5</div>
+              <div>
+                <h4>Contact Form + GHL Integration</h4>
+                <p>Lead capture form connected directly to GoHighLevel CRM. Every enquiry triggers an automatic email and SMS follow-up within 60 seconds.</p>
+              </div>
+            </div>
+            <div class="solution-step">
+              <div class="step-num-circle">6</div>
+              <div>
+                <h4>Automated Follow-up Sequence</h4>
+                <p>5-day automated follow-up sequence for every new lead — welcome message, service information, patient testimonial, FAQ, and final booking reminder.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEFORE AFTER -->
+        <div class="cs-section reveal">
+          <h2>Before vs. <em>After</em></h2>
+          <div class="before-after">
+            <div class="ba-box before">
+              <h4>❌ Before</h4>
+              <div class="ba-item"><span>🌐</span><span>No professional online presence</span></div>
+              <div class="ba-item"><span>📋</span><span>Losing patients to competitors with better websites</span></div>
+              <div class="ba-item"><span>📞</span><span>All enquiries handled manually by phone</span></div>
+              <div class="ba-item"><span>😰</span><span>No follow-up system for missed leads</span></div>
+              <div class="ba-item"><span>💸</span><span>Marketing spend wasted with no landing page</span></div>
+            </div>
+            <div class="ba-box after">
+              <h4>✅ After</h4>
+              <div class="ba-item"><span>🌐</span><span>Professional multi-section website live in GHL</span></div>
+              <div class="ba-item"><span>🏆</span><span>Outranking local competitors online</span></div>
+              <div class="ba-item"><span>🤖</span><span>Automatic lead capture and response 24/7</span></div>
+              <div class="ba-item"><span>📧</span><span>5-day automated follow-up sequence running</span></div>
+              <div class="ba-item"><span>📈</span><span>More booked appointments from online traffic</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WHAT I BUILT -->
+        <div class="cs-section reveal">
+          <h2>What Was <em>Included</em></h2>
+          <div class="feature-grid">
+            <div class="feature-box"><h4>🏥 Hero Section</h4><p>Professional headline, photography, trust badges and high-converting CTA button.</p></div>
+            <div class="feature-box"><h4>💆 Services Section</h4><p>All clinic services displayed clearly with descriptions, benefits and booking links.</p></div>
+            <div class="feature-box"><h4>👨‍⚕️ Team Profiles</h4><p>Professional staff profiles with photos and qualifications to build patient trust.</p></div>
+            <div class="feature-box"><h4>⭐ Testimonials</h4><p>Real patient reviews and partner logos to eliminate doubt and build credibility.</p></div>
+            <div class="feature-box"><h4>📧 Contact Form + CRM</h4><p>Lead capture form connected to GHL with instant automated response.</p></div>
+            <div class="feature-box"><h4>📱 Mobile Optimised</h4><p>Fully responsive — looks perfect on all devices including phones and tablets.</p></div>
+          </div>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="cs-section reveal">
+          <h2>Tools & <em>Integrations</em></h2>
+          <div class="tools-grid">
+            <div class="tool-badge">⚡ GoHighLevel</div>
+            <div class="tool-badge">📧 Email Automation</div>
+            <div class="tool-badge">💬 SMS Automation</div>
+            <div class="tool-badge">📅 Booking Calendar</div>
+            <div class="tool-badge">🎨 Custom CSS Design</div>
+            <div class="tool-badge">📱 Mobile Responsive</div>
+            <div class="tool-badge">🔗 CRM Integration</div>
+            <div class="tool-badge">💬 Live Chat Widget</div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIAL -->
+        <div class="cs-testimonial reveal">
+          <div style="font-size:2rem;margin-bottom:1rem;">⭐⭐⭐⭐⭐</div>
+          <p>"Samuel delivered an incredible website for our clinic. It looks extremely professional, loads fast, and the automated follow-up has already helped us book more patients. We couldn't be happier with the results."</p>
+          <strong>Restorative Health & Wellness Clinic Owner</strong>
+          <span>🇺🇸 United States · GoHighLevel Website Client</span>
+        </div>
+
+        <!-- CTA -->
+        <div class="cs-cta reveal">
+          <h3>Need a Website Like This for Your Business?</h3>
+          <p>I'll build you a professional, conversion-optimised website inside GoHighLevel — complete with automated lead follow-up so you never miss a potential client.</p>
+          <div class="cs-cta-btns">
+            <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary large">📅 Book a Free Strategy Call</a>
+            <a href="portfolio.html" class="btn-secondary large">← View More Projects</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Samuel<span>Peter</span></div>
+        <p>GoHighLevel Expert & Email Marketing Specialist.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/samuel-lex-/" target="_blank" class="linkedin" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="white"/></svg></a>
+          <a href="https://x.com/PeterSamue68242" target="_blank" class="twitter" title="Twitter/X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="white"/></svg></a>
+          <a href="https://wa.me/2348106433379" target="_blank" class="whatsapp" title="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="white"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-links"><h4>Pages</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div>
+      <div class="footer-links"><h4>Services</h4><a href="services.html">Email Marketing</a><a href="services.html">GoHighLevel</a><a href="services.html">CRM Automation</a><a href="services.html">Sales Funnels</a></div>
+      <div class="footer-contact"><h4>Contact</h4><a href="mailto:petersamuellex@gmail.com">petersamuellex@gmail.com</a><a href="https://wa.me/2348106433379">+234 810 643 3379</a></div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 Samuel Peter. All rights reserved.</div></div>
+  </footer>
+  <script src="main.js"></script>
+  <script src="chatbot.js"></script>
+  <script src="exit-popup.js"></script>
+</body>
+</html>
