@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Hire Samuel Peter — GoHighLevel Expert | Book a Free Discovery Call</title>
+  <title>Hire Samuel Peter — GoHighLevel Expert | Book a Free Discovery Call</title>
   <meta name="description" content="Ready to fix your GoHighLevel system or launch a high-converting email campaign? Book a free 30-minute discovery call with Samuel Peter. Serving US, UK & Canada clients."/>
   <meta name="keywords" content="hire GoHighLevel expert, book GoHighLevel consultant, email marketing specialist contact, GoHighLevel freelancer for hire, marketing automation consultant"/>
   <meta name="author" content="Samuel Peter"/>
@@ -45,6 +45,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico"/>
   <link rel="stylesheet" href="main-style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; }
+    @media (max-width: 992px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+  </style>
 </head>
 <body>
   <header class="navbar" id="navbar">
@@ -75,21 +81,21 @@
     </div>
   </section>
 
-    <section class="section bg-white">
+  <section class="section bg-white">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;align-items:start;">
+      <div class="contact-grid">
 
         <!-- CONTACT INFO -->
         <div class="reveal">
-          <h2 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;margin-bottom:1rem;">Get In Touch</h2>
-          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:2rem;">Whether you need a full GHL buildout, email automation, or just want to talk through your current setup — book a free call or reach out directly.</p>
+          <h2 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;margin-bottom:1rem;color:#0f172a;">Get In Touch</h2>
+          <p style="color:var(--text-muted, #64748b);line-height:1.8;margin-bottom:2rem;font-size:0.95rem;">Whether you need a full GHL buildout, email automation, or just want to talk through your current setup — book a free call or reach out directly.</p>
 
           <div class="contact-methods">
-            <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="contact-method" style="background:var(--blue-light);border-color:var(--blue);">
+            <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="contact-method" style="background:var(--blue-light, #eff6ff);border-color:var(--blue, #1B4FD8);">
               <div class="cm-icon">📅</div>
               <div>
                 <div class="cm-label">Book a Free Call</div>
-                <div class="cm-val" style="color:var(--blue);font-weight:700;">Pick a time on Calendly →</div>
+                <div class="cm-val" style="color:var(--blue, #1B4FD8);font-weight:700;">Pick a time on Calendly →</div>
               </div>
             </a>
             <a href="mailto:petersamuellex@gmail.com" class="contact-method">
@@ -140,7 +146,6 @@
     </div>
   </section>
 
-
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
@@ -169,9 +174,7 @@
     <div class="footer-bottom"><div class="container">© 2026 Samuel Peter. All rights reserved.</div></div>
   </footer>
   <script src="main.js"></script>
-
-
-<script src="chatbot.js"></script>
-<script src="exit-popup.js"></script>
+  <script src="chatbot.js"></script>
+  <script src="exit-popup.js"></script>
 </body>
 </html>
