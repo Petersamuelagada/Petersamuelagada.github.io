@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>GoHighLevel Setup, Email Marketing & CRM Automation Services — Samuel Peter</title>
+  <title>GoHighLevel Setup, Email Marketing & CRM Automation Services — Samuel Peter</title>
   <meta name="description" content="Professional GoHighLevel setup, email marketing automation, CRM buildout, sales funnels, AI chatbots and Zapier integrations. Serving US, UK & Canada businesses. Get a free consultation."/>
   <meta name="keywords" content="GoHighLevel setup service, email marketing automation service, CRM automation expert, sales funnel designer, GHL automation, hire GoHighLevel expert, email marketing consultant"/>
   <meta name="author" content="Samuel Peter"/>
@@ -331,10 +331,67 @@
     </div>
     <div class="footer-bottom"><div class="container">© 2026 Samuel Peter. All rights reserved.</div></div>
   </footer>
+
+  <!-- PLATFORM ENGINE INJECTIONS -->
   <script src="main.js"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Core Mobile Menu Functional UI
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function (e) {
+          e.stopPropagation();
+          mobileMenu.classList.toggle('active');
+        });
+        
+        // Clean close on document click background interactions
+        document.addEventListener('click', function (e) {
+          if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            mobileMenu.classList.remove('active');
+          }
+        });
+      }
 
+      // 2. Performance Optimized Intersection Observer for Scroll Reveals
+      const revealElements = document.querySelectorAll('.reveal');
+      
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active'); // Ensure your main-style.css supports .reveal.active rules
+              // Alternately injecting direct style properties safely if CSS classes aren't preset
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.15,
+          rootMargin: "0px 0px -40px 0px"
+        });
 
-<script src="chatbot.js"></script>
-<script src="exit-popup.js"></script>
+        revealElements.forEach(element => {
+          // Setup base layout styles programmatically to gracefully handle non-JS environment fallbacks
+          element.style.opacity = "0";
+          element.style.transform = "translateY(24px)";
+          element.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)";
+          revealObserver.observe(element);
+        });
+      } else {
+        // Fallback for deprecated browser environments
+        revealElements.forEach(el => {
+          el.style.opacity = "1";
+          el.style.transform = "translateY(0)";
+        });
+      }
+    });
+  </script>
+
+  <script src="chatbot.js"></script>
+  <script src="exit-popup.js"></script>
 </body>
 </html>
