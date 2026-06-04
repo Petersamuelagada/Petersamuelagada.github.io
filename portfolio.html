@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -22,7 +22,6 @@
     .pcard-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.5s ease; }
     .portfolio-card:hover .pcard-img img { transform: scale(1.05); }
 
-    /* Visual backgrounds for cards without screenshots */
     .pcard-visual {
       height: 220px; position: relative; overflow: hidden;
       display: flex; align-items: center; justify-content: center;
@@ -37,14 +36,11 @@
       font-size: 0.78rem; font-weight: 700; letter-spacing: 2px;
       text-transform: uppercase; color: rgba(255,255,255,0.7);
     }
-    .pcard-visual-stats {
-      display: flex; gap: 1.5rem; margin-top: 0.5rem;
-    }
+    .pcard-visual-stats { display: flex; gap: 1.5rem; margin-top: 0.5rem; }
     .pcard-visual-stat { text-align: center; }
     .pcard-visual-stat strong { display: block; font-size: 1.3rem; font-weight: 800; color: white; }
     .pcard-visual-stat span { font-size: 0.7rem; color: rgba(255,255,255,0.7); }
 
-    /* Gradient backgrounds */
     .bg-ghl { background: linear-gradient(135deg, #1B4FD8 0%, #0D1117 100%); }
     .bg-email { background: linear-gradient(135deg, #0D1117 0%, #1B4FD8 60%, #3D6FE8 100%); }
     .bg-ai { background: linear-gradient(135deg, #6C3FD8 0%, #2D1B8E 100%); }
@@ -54,7 +50,6 @@
     .bg-coaching { background: linear-gradient(135deg, #0A0F2E 0%, #1B4FD8 100%); }
     .bg-construction { background: linear-gradient(135deg, #1A0A00 0%, #B45309 100%); }
 
-    /* Decorative circles */
     .pcard-visual::before {
       content: ''; position: absolute;
       width: 200px; height: 200px; border-radius: 50%;
@@ -88,7 +83,6 @@
     .result-item span.purple { color: #6C3FD8; }
     .result-item span.orange { color: #B45309; }
 
-    /* Stats bar */
     .portfolio-stats {
       display: flex; gap: 3rem; justify-content: center;
       padding: 2.5rem 0; margin-bottom: 3rem;
@@ -135,7 +129,6 @@
   <section class="section bg-white">
     <div class="container">
 
-      <!-- Stats bar -->
       <div class="portfolio-stats">
         <div class="pstat"><strong>50+</strong><span>Projects Completed</span></div>
         <div class="pstat"><strong>5.0★</strong><span>Average Rating</span></div>
@@ -143,7 +136,6 @@
         <div class="pstat"><strong>3+</strong><span>Years Experience</span></div>
       </div>
 
-      <!-- Filter -->
       <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="landing">Landing Pages</button>
@@ -154,7 +146,6 @@
       </div>
 
       <div class="portfolio-grid">
-
 
         <!-- 1. CONCRETE CONSTRUCTION -->
         <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-construction.html'" style="cursor:pointer;">
@@ -193,7 +184,7 @@
           </div>
         </div>
 
-        <!-- 2. HERBAL HEALTH -->
+        <!-- 3. HERBAL HEALTH -->
         <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-herbal.html'" style="cursor:pointer;">
           <div class="pcard-img">
             <div class="pcard-overlay"><span>Landing Page</span></div>
@@ -212,7 +203,7 @@
           </div>
         </div>
 
-        <!-- 3. HEALTH CLINIC -->
+        <!-- 4. HEALTH CLINIC -->
         <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-clinic.html'" style="cursor:pointer;">
           <div class="pcard-img">
             <div class="pcard-overlay"><span>Landing Page</span></div>
@@ -231,7 +222,7 @@
           </div>
         </div>
 
-        <!-- 4. REAL ESTATE -->
+        <!-- 5. REAL ESTATE -->
         <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-realestate.html'" style="cursor:pointer;">
           <div class="pcard-img">
             <div class="pcard-overlay"><span>Real Estate</span></div>
@@ -250,11 +241,11 @@
           </div>
         </div>
 
-        <!-- 5. PHOTOGRAPHY COURSE -->
+        <!-- 6. PHOTOGRAPHY COURSE -->
         <div class="portfolio-card reveal" data-cat="landing">
           <div class="pcard-img">
             <div class="pcard-overlay"><span>Course Page</span></div>
-            <img src="Photography_Mockup.jpg" alt="Mastering Photography Course Landing Page"/>
+            <img src="Photography%20Mockup.jpg" alt="Mastering Photography Course Landing Page"/>
           </div>
           <div class="pcard-body">
             <div class="pcard-tag">Education — Course Launch</div>
@@ -268,7 +259,7 @@
           </div>
         </div>
 
-        <!-- 6. COACHING & SPEAKER CONFERENCE -->
+        <!-- 7. COACHING & SPEAKER CONFERENCE -->
         <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-coaching.html'" style="cursor:pointer;">
           <div class="pcard-img">
             <div class="pcard-overlay"><span>Event Page</span></div>
@@ -310,7 +301,7 @@
           </div>
         </div>
 
-        <!-- 8. GHL CRM -->
+        <!-- 9. GHL CRM -->
         <div class="portfolio-card reveal" data-cat="ghl" onclick="window.location='case-study-ghl-coaching.html'" style="cursor:pointer;">
           <div class="pcard-visual bg-ghl">
             <div class="pcard-overlay"><span>GHL Automation</span></div>
@@ -335,7 +326,7 @@
           </div>
         </div>
 
-        <!-- 9. GHL STATUS UPDATE WORKFLOW -->
+        <!-- 10. GHL STATUS UPDATE WORKFLOW -->
         <div class="portfolio-card reveal" data-cat="ghl">
           <div class="pcard-img">
             <div class="pcard-overlay"><span>GHL Workflow</span></div>
@@ -354,7 +345,7 @@
           </div>
         </div>
 
-        <!-- 10. GHL LEAD NURTURE WORKFLOW -->
+        <!-- 11. GHL LEAD NURTURE WORKFLOW -->
         <div class="portfolio-card reveal" data-cat="ghl">
           <div class="pcard-img">
             <div class="pcard-overlay"><span>GHL Workflow</span></div>
