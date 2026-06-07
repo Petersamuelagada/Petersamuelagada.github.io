@@ -11,88 +11,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
   <style>
     .portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.8rem; }
-    .portfolio-card {
-      background: white; border: 1px solid var(--border);
-      border-radius: 16px; overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
+    .portfolio-card { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
     .portfolio-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(27,79,216,0.15); border-color: var(--blue); }
     .pcard-img { height: 220px; overflow: hidden; position: relative; }
     .pcard-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.5s ease; }
     .portfolio-card:hover .pcard-img img { transform: scale(1.05); }
-
-    .pcard-visual {
-      height: 220px; position: relative; overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .pcard-visual-inner {
-      width: 100%; height: 100%; display: flex;
-      flex-direction: column; align-items: center; justify-content: center;
-      gap: 0.8rem; position: relative; z-index: 1;
-    }
+    .pcard-visual { height: 220px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .pcard-visual-inner { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.8rem; position: relative; z-index: 1; }
     .pcard-visual-icon { font-size: 3.5rem; }
-    .pcard-visual-label {
-      font-size: 0.78rem; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: rgba(255,255,255,0.7);
-    }
+    .pcard-visual-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
     .pcard-visual-stats { display: flex; gap: 1.5rem; margin-top: 0.5rem; }
     .pcard-visual-stat { text-align: center; }
     .pcard-visual-stat strong { display: block; font-size: 1.3rem; font-weight: 800; color: white; }
     .pcard-visual-stat span { font-size: 0.7rem; color: rgba(255,255,255,0.7); }
-
     .bg-ghl { background: linear-gradient(135deg, #1B4FD8 0%, #0D1117 100%); }
     .bg-email { background: linear-gradient(135deg, #0D1117 0%, #1B4FD8 60%, #3D6FE8 100%); }
     .bg-ai { background: linear-gradient(135deg, #6C3FD8 0%, #2D1B8E 100%); }
     .bg-funnel { background: linear-gradient(135deg, #1440B0 0%, #3D6FE8 100%); }
-    .bg-real { background: linear-gradient(135deg, #0D1117 0%, #1B4FD8 100%); }
-    .bg-health { background: linear-gradient(135deg, #0D7B5E 0%, #1B4FD8 100%); }
-    .bg-coaching { background: linear-gradient(135deg, #0A0F2E 0%, #1B4FD8 100%); }
-    .bg-construction { background: linear-gradient(135deg, #1A0A00 0%, #B45309 100%); }
-
-    .pcard-visual::before {
-      content: ''; position: absolute;
-      width: 200px; height: 200px; border-radius: 50%;
-      background: rgba(255,255,255,0.05);
-      top: -60px; right: -60px;
-    }
-    .pcard-visual::after {
-      content: ''; position: absolute;
-      width: 120px; height: 120px; border-radius: 50%;
-      background: rgba(255,255,255,0.05);
-      bottom: -30px; left: -30px;
-    }
-
+    .pcard-visual::before { content: ''; position: absolute; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.05); top: -60px; right: -60px; }
+    .pcard-visual::after { content: ''; position: absolute; width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,0.05); bottom: -30px; left: -30px; }
     .pcard-overlay { position: absolute; top: 1rem; left: 1rem; z-index: 2; }
-    .pcard-overlay span {
-      background: rgba(255,255,255,0.2); backdrop-filter: blur(8px);
-      color: white; padding: 0.3rem 0.9rem; border-radius: 20px;
-      font-size: 0.72rem; font-weight: 700; border: 1px solid rgba(255,255,255,0.3);
-    }
+    .pcard-overlay span { background: rgba(255,255,255,0.2); backdrop-filter: blur(8px); color: white; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.72rem; font-weight: 700; border: 1px solid rgba(255,255,255,0.3); }
     .pcard-body { padding: 1.5rem; }
     .pcard-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 0.4rem; }
     .pcard-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.4; color: var(--text); }
     .pcard-body p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem; }
-    .pcard-results {
-      display: flex; gap: 1.2rem; border-top: 1px solid var(--border);
-      padding-top: 0.9rem; flex-wrap: wrap;
-    }
+    .pcard-results { display: flex; gap: 1.2rem; border-top: 1px solid var(--border); padding-top: 0.9rem; flex-wrap: wrap; }
     .result-item { font-size: 0.75rem; color: var(--text-muted); }
     .result-item span { display: block; font-weight: 800; color: var(--blue); font-size: 1rem; }
     .result-item span.green { color: #16A34A; }
     .result-item span.purple { color: #6C3FD8; }
     .result-item span.orange { color: #B45309; }
-
-    .portfolio-stats {
-      display: flex; gap: 3rem; justify-content: center;
-      padding: 2.5rem 0; margin-bottom: 3rem;
-      border-bottom: 1px solid var(--border);
-      flex-wrap: wrap;
-    }
+    .portfolio-stats { display: flex; gap: 3rem; justify-content: center; padding: 2.5rem 0; margin-bottom: 3rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
     .pstat { text-align: center; }
     .pstat strong { display: block; font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--blue); }
     .pstat span { font-size: 0.82rem; color: var(--text-muted); }
-
     @media(max-width:1024px){ .portfolio-grid { grid-template-columns: repeat(2,1fr); } }
     @media(max-width:600px){ .portfolio-grid { grid-template-columns: 1fr; } .portfolio-stats { gap: 1.5rem; } }
   </style>
@@ -106,7 +59,6 @@
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html" class="active">Portfolio</a>
-        <a href="case-studies.html">Case Studies</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -114,7 +66,7 @@
       <button class="hamburger" id="hamburger">&#9776;</button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
     </div>
   </header>
 
@@ -128,7 +80,6 @@
 
   <section class="section bg-white">
     <div class="container">
-
       <div class="portfolio-stats">
         <div class="pstat"><strong>50+</strong><span>Projects Completed</span></div>
         <div class="pstat"><strong>5.0★</strong><span>Average Rating</span></div>
@@ -242,10 +193,10 @@
         </div>
 
         <!-- 6. PHOTOGRAPHY COURSE -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-photography.html'" style="cursor:pointer;">
+        <div class="portfolio-card reveal" data-cat="landing">
           <div class="pcard-img">
             <div class="pcard-overlay"><span>Course Page</span></div>
-            <img src="Photography%20Mockup.jpg" alt="Mastering Photography Course Landing Page"/>
+            <img src="Photography_Mockup.jpg" alt="Mastering Photography Course Landing Page"/>
           </div>
           <div class="pcard-body">
             <div class="pcard-tag">Education — Course Launch</div>
@@ -256,11 +207,67 @@
               <div class="result-item"><span class="green">300+</span>Reviews</div>
               <div class="result-item"><span class="green">99%</span>Satisfaction</div>
             </div>
-            <a href="case-study-photography.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
           </div>
         </div>
 
-        <!-- 7. COACHING & SPEAKER CONFERENCE -->
+        <!-- 7. PRECISION AI LANDING PAGE -->
+        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-precisionai.html'" style="cursor:pointer;">
+          <div class="pcard-img">
+            <div class="pcard-overlay"><span>AI Marketing</span></div>
+            <img src="AIPRECIS_LANDING_PAGE_mockup.jpg" alt="Precision AI Growth Landing Page"/>
+          </div>
+          <div class="pcard-body">
+            <div class="pcard-tag">AI Marketing — Lead Generation</div>
+            <h3>AI Marketing Landing Page — Precision AI Growth</h3>
+            <p>Full landing page for an AI marketing agency — hero with 24/7 AI answering agent offer, 4 AI service blocks (market analysis, campaigns, social media, skills training), FAQ, and Google-verified testimonials. Built inside GoHighLevel.</p>
+            <div class="pcard-results">
+              <div class="result-item"><span class="purple">AI</span>Powered</div>
+              <div class="result-item"><span class="purple">24/7</span>Agent</div>
+              <div class="result-item"><span class="purple">GHL</span>Built</div>
+            </div>
+            <a href="case-study-precisionai.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
+          </div>
+        </div>
+
+        <!-- 8. PATERNITY LAB -->
+        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-paternitylab.html'" style="cursor:pointer;">
+          <div class="pcard-img">
+            <div class="pcard-overlay"><span>Healthcare</span></div>
+            <img src="PaternityLabLandingPageDesign_mockup.jpg" alt="PaternityLab DNA Testing Landing Page"/>
+          </div>
+          <div class="pcard-body">
+            <div class="pcard-tag">Healthcare — DNA Testing</div>
+            <h3>DNA Paternity Testing Landing Page — PaternityLab.com</h3>
+            <p>Full landing page for a DNA testing lab — hero with order CTA, 4 test types (Home, Immigration, Legal, Prenatal), accreditation badges, lab difference section, local facilities, and client reviews. Built inside GoHighLevel.</p>
+            <div class="pcard-results">
+              <div class="result-item"><span class="green">99.99%</span>Accuracy</div>
+              <div class="result-item"><span class="green">4</span>Test Types</div>
+              <div class="result-item"><span class="green">5★</span>Rating</div>
+            </div>
+            <a href="case-study-paternitylab.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
+          </div>
+        </div>
+
+        <!-- 10. MOTORCYCLE MASTERY OPT-IN -->
+        <div class="portfolio-card reveal" data-cat="funnel" onclick="window.location='case-study-motorcycle.html'" style="cursor:pointer;">
+          <div class="pcard-img">
+            <div class="pcard-overlay"><span>Opt-in Page</span></div>
+            <img src="OptinPageMotorcycle_Masterymockup.jpg" alt="Motorcycle Mastery Opt-in Landing Page"/>
+          </div>
+          <div class="pcard-body">
+            <div class="pcard-tag">Lead Generation — Opt-in Funnel</div>
+            <h3>Motorcycle Mastery Free Guide Opt-in Page — Petrolhead</h3>
+            <p>Full lead capture opt-in page for a motorcycle training brand — hero with free $97 guide offer, 6 chapter previews, 38K subscriber social proof, author bio, real testimonials, FAQ, and a multi-CTA funnel built inside GoHighLevel.</p>
+            <div class="pcard-results">
+              <div class="result-item"><span class="green">38K</span>Subscribers</div>
+              <div class="result-item"><span class="green">Free</span>Lead Magnet</div>
+              <div class="result-item"><span class="green">5★</span>Rating</div>
+            </div>
+            <a href="case-study-motorcycle.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
+          </div>
+        </div>
+
+        <!-- 11. COACHING & SPEAKER CONFERENCE -->
         <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-coaching.html'" style="cursor:pointer;">
           <div class="pcard-img">
             <div class="pcard-overlay"><span>Event Page</span></div>
@@ -279,7 +286,7 @@
           </div>
         </div>
 
-        <!-- VOICE AI AGENT - FEATURED -->
+        <!-- 8. VOICE AI AGENT - FEATURED -->
         <div class="portfolio-card reveal" data-cat="ai" style="border: 2px solid #6C3FD8; position:relative;">
           <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#6C3FD8,#4B2AAD);color:white;padding:0.3rem 1.2rem;border-radius:20px;font-size:0.72rem;font-weight:700;letter-spacing:1px;white-space:nowrap;z-index:10;">⭐ FEATURED PROJECT</div>
           <div class="pcard-img" style="height:240px;background:#0f1923;">
@@ -287,7 +294,7 @@
             <img src="pabbly-workflow.png" alt="Pabbly Voice AI Automation Workflow" style="width:100%;height:100%;object-fit:cover;object-position:center;"/>
           </div>
           <div class="pcard-body">
-            <div class="pcard-tag purple" style="color:#6C3FD8;">Voice AI + Automation</div>
+            <div class="pcard-tag" style="color:#6C3FD8;">Voice AI + Automation</div>
             <h3>Voice AI Agent → Automatic Lead Calling & CRM Integration</h3>
             <p>Built a 20+ step Pabbly automation for a client — their Voice AI agent automatically calls new leads, logs call data to Google Sheets, filters by response, and syncs qualified leads directly into their CRM. Zero manual work.</p>
             <div style="margin-bottom:1rem;">
@@ -302,7 +309,7 @@
           </div>
         </div>
 
-        <!-- 9. GHL CRM -->
+        <!-- 9. GHL CRM BUILDOUT -->
         <div class="portfolio-card reveal" data-cat="ghl" onclick="window.location='case-study-ghl-coaching.html'" style="cursor:pointer;">
           <div class="pcard-visual bg-ghl">
             <div class="pcard-overlay"><span>GHL Automation</span></div>
@@ -343,82 +350,6 @@
               <div class="result-item"><span class="green">SMS</span>+ Email</div>
               <div class="result-item"><span class="green">Zero</span>Manual Work</div>
             </div>
-          </div>
-        </div>
-
-        <!-- 15. PRO STUDIO -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-pro-studio.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Real Estate Media</span></div>
-            <img src="PRO_STUDIO_Mockup.jpg" alt="Pro Studio Real Estate Media Website"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Real Estate — Media & Photography</div>
-            <h3>Pro Studio — Architectural-Grade Real Estate Media Website</h3>
-            <p>Premium real estate media website for a Toronto agency — 6 media services (photography, 4K video, 3D Matterport, drone, reels, floor plans), curated packages, real listing showcase, and 24hr delivery promise built inside GoHighLevel.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>6</span>Services</div>
-              <div class="result-item"><span>24hr</span>Delivery</div>
-              <div class="result-item"><span class="green">🇨🇦</span>Toronto</div>
-            </div>
-            <a href="case-study-pro-studio.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 14. CLICKUP FUNNELS -->
-        <div class="portfolio-card reveal" data-cat="funnel" onclick="window.location='case-study-clickup-funnels.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Sales Funnel</span></div>
-            <img src="Clickupmockup.jpg" alt="ClickUp Funnels DFY Sales Funnel System"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Coaching — DFY Sales Funnel</div>
-            <h3>ClickUp Funnels — DFY Sales Funnel System for Coaches</h3>
-            <p>100% done-for-you sales funnel landing page for coaches and course creators — offer mapping, copy, funnel design, email automation, tech integration, and 90-day optimisation. Live and converting in 30 days.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>DFY</span>Done For You</div>
-              <div class="result-item"><span>30</span>Days to Live</div>
-              <div class="result-item"><span class="green">24/7</span>Running</div>
-            </div>
-            <a href="case-study-clickup-funnels.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 12. TRANSFORMING LIVES DIGITALLY -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-transforming.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Finance & EdTech</span></div>
-            <img src="Transforming_digital_Mockup.jpg" alt="Transforming Lives Digitally Platform"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Finance — Course Platform</div>
-            <h3>Transforming Lives Digitally — Financial Literacy Platform</h3>
-            <p>Full AI-powered financial literacy platform — crypto, stocks, and forex learning tracks, 4-tier pricing ($99–$139), AI tools, live workshops, affiliate programme, and a 3-step onboarding flow built inside GoHighLevel.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>4</span>Pricing Tiers</div>
-              <div class="result-item"><span>AI</span>Integrated</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-transforming.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 13. LEGAL LEAD MARKETING -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-legal-lead.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Legal / AI</span></div>
-            <img src="Legal_Lead_Marketingmockup.jpg" alt="Legal Lead AI Marketing System"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Legal — AI Marketing & Intake</div>
-            <h3>Legal Lead — AI Marketing & Intake System for Law Firms</h3>
-            <p>Complete AI-powered marketing and intake system for solo lawyers and SME law firms — AI receptionist, SEO, social media management, reputation monitoring, CRM automation, and 24/7 lead capture.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>24/7</span>AI Intake</div>
-              <div class="result-item"><span>6</span>Components</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-legal-lead.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
           </div>
         </div>
 
@@ -505,7 +436,7 @@
       </div>
       <div class="footer-links">
         <h4>Pages</h4>
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
       </div>
       <div class="footer-links">
         <h4>Services</h4>
