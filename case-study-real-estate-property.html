@@ -3,48 +3,52 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio — Real Work & Results | Samuel Peter GoHighLevel Expert</title>
-  <meta name="description" content="View Samuel Peter's real portfolio of landing pages, GHL buildouts, email campaigns, and AI chatbot integrations for US, UK & Canada clients."/>
+  <title>Case Study: Real — Top Producing Agent Recruitment Landing Page | Samuel Peter</title>
+  <meta name="description" content="How Samuel Peter built a real estate agent recruitment landing page for Real — targeting top-producing agents with industry-leading commission splits, training, and technology."/>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
   <link rel="stylesheet" href="main-style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
   <style>
-    .portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.8rem; }
-    .portfolio-card { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
-    .portfolio-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(27,79,216,0.15); border-color: var(--blue); }
-    .pcard-img { height: 220px; overflow: hidden; position: relative; }
-    .pcard-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.5s ease; }
-    .portfolio-card:hover .pcard-img img { transform: scale(1.05); }
-    .pcard-visual { height: 220px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-    .pcard-visual-inner { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.8rem; position: relative; z-index: 1; }
-    .pcard-visual-icon { font-size: 3.5rem; }
-    .pcard-visual-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
-    .pcard-visual-stats { display: flex; gap: 1.5rem; margin-top: 0.5rem; }
-    .pcard-visual-stat { text-align: center; }
-    .pcard-visual-stat strong { display: block; font-size: 1.3rem; font-weight: 800; color: white; }
-    .pcard-visual-stat span { font-size: 0.7rem; color: rgba(255,255,255,0.7); }
-    .bg-ghl { background: linear-gradient(135deg, #1B4FD8 0%, #0D1117 100%); }
-    .pcard-visual::before { content: ''; position: absolute; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.05); top: -60px; right: -60px; }
-    .pcard-visual::after { content: ''; position: absolute; width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,0.05); bottom: -30px; left: -30px; }
-    .pcard-overlay { position: absolute; top: 1rem; left: 1rem; z-index: 2; }
-    .pcard-overlay span { background: rgba(255,255,255,0.2); backdrop-filter: blur(8px); color: white; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.72rem; font-weight: 700; border: 1px solid rgba(255,255,255,0.3); }
-    .pcard-body { padding: 1.5rem; }
-    .pcard-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 0.4rem; }
-    .pcard-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.4; color: var(--text); }
-    .pcard-body p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem; }
-    .pcard-results { display: flex; gap: 1.2rem; border-top: 1px solid var(--border); padding-top: 0.9rem; flex-wrap: wrap; }
-    .result-item { font-size: 0.75rem; color: var(--text-muted); }
-    .result-item span { display: block; font-weight: 800; color: var(--blue); font-size: 1rem; }
-    .result-item span.green { color: #16A34A; }
-    .result-item span.purple { color: #6C3FD8; }
-    .result-item span.orange { color: #B45309; }
-    .portfolio-stats { display: flex; gap: 3rem; justify-content: center; padding: 2.5rem 0; margin-bottom: 3rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
-    .pstat { text-align: center; }
-    .pstat strong { display: block; font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--blue); }
-    .pstat span { font-size: 0.82rem; color: var(--text-muted); }
-    @media(max-width:1024px){ .portfolio-grid { grid-template-columns: repeat(2,1fr); } }
-    @media(max-width:600px){ .portfolio-grid { grid-template-columns: 1fr; } .portfolio-stats { gap: 1.5rem; } }
+    .cs-hero{background:linear-gradient(135deg,#0A1628 0%,#0D4A6B 100%);padding:9rem 0 5rem;color:white}
+    .cs-hero-inner{max-width:800px}
+    .cs-back{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.6);font-size:.85rem;margin-bottom:2rem;transition:color .2s;text-decoration:none}
+    .cs-back:hover{color:white}
+    .cs-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+    .cs-tag{background:rgba(255,255,255,.15);color:white;padding:.3rem 1rem;border-radius:20px;font-size:.75rem;font-weight:600;border:1px solid rgba(255,255,255,.2)}
+    .cs-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;line-height:1.2;margin-bottom:1.5rem}
+    .cs-hero h1 em{font-style:italic;color:#00D4FF}
+    .cs-hero-meta{display:flex;gap:2rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15)}
+    .cs-meta-item span{display:block;font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:.2rem}
+    .cs-meta-item strong{font-size:.9rem;color:white}
+    .cs-results-banner{background:white;border-radius:20px;padding:2.5rem;margin:-3rem 0 4rem;box-shadow:0 20px 60px rgba(0,0,0,.12);display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;position:relative;z-index:10}
+    .cs-result{text-align:center;padding:1rem;border-right:1px solid var(--border,#e2e8f0)}
+    .cs-result:last-child{border-right:none}
+    .cs-result-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--blue,#1B4FD8);line-height:1;margin-bottom:.3rem}
+    .cs-result-num.green{color:#16A34A}
+    .cs-result-num.cyan{color:#0891B2}
+    .cs-result-label{font-size:.78rem;color:var(--text-muted,#64748b);font-weight:500}
+    .cs-content{max-width:780px;margin:0 auto}
+    .cs-section{margin-bottom:4rem}
+    .cs-section h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;margin-bottom:1.2rem;color:#0f172a}
+    .cs-section h2 em{font-style:italic;color:var(--blue,#1B4FD8)}
+    .cs-section p{color:var(--text-muted,#64748b);line-height:1.85;margin-bottom:1rem;font-size:.95rem}
+    .cs-img-full{width:100%;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.15);margin:2rem 0;display:block;height:auto}
+    .cs-img-caption{text-align:center;font-size:.78rem;color:var(--text-muted,#64748b);margin-top:-1rem;margin-bottom:2rem}
+    .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+    .feature-box{background:var(--light,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:1.2rem}
+    .feature-box h4{font-size:.9rem;font-weight:700;margin-bottom:.3rem;color:#0f172a}
+    .feature-box p{font-size:.82rem;color:var(--text-muted,#64748b);margin:0;line-height:1.5}
+    .tools-grid{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.5rem 0}
+    .tool-badge{display:flex;align-items:center;gap:.5rem;background:var(--blue-light,#eff6ff);border:1px solid rgba(27,79,216,.2);border-radius:10px;padding:.5rem 1rem;font-size:.85rem;font-weight:600;color:var(--blue,#1B4FD8)}
+    .cs-testimonial{background:linear-gradient(135deg,#0A1628,#0D4A6B);border-radius:20px;padding:2.5rem;margin:3rem 0;text-align:center}
+    .cs-testimonial p{font-size:1.1rem;color:white;line-height:1.7;font-style:italic;margin-bottom:1.5rem}
+    .cs-testimonial strong{color:#00D4FF;display:block}
+    .cs-testimonial span{color:rgba(255,255,255,.7);font-size:.85rem}
+    .cs-cta{background:var(--light,#f8fafc);border-radius:20px;padding:3rem;text-align:center;margin-top:4rem;border:1px solid var(--border,#e2e8f0)}
+    .cs-cta h3{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:.8rem;color:#0f172a}
+    .cs-cta p{color:var(--text-muted,#64748b);margin-bottom:1.5rem}
+    .cs-cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    @media(max-width:768px){.cs-results-banner{grid-template-columns:repeat(2,1fr);margin-top:-1.5rem}.feature-grid{grid-template-columns:1fr}.cs-result{border-right:none;border-bottom:1px solid var(--border,#e2e8f0)}.cs-result:last-child{border-bottom:none}}
   </style>
 </head>
 <body>
@@ -52,13 +56,7 @@
     <div class="container nav-inner">
       <a href="index.html" class="logo">Samuel<span>Peter</span></a>
       <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html" class="active">Portfolio</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html" class="active">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
       </nav>
       <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary">Book a Free Call</a>
       <button class="hamburger" id="hamburger">&#9776;</button>
@@ -68,531 +66,105 @@
     </div>
   </header>
 
-  <section class="page-hero">
+  <section class="cs-hero">
     <div class="container">
-      <div class="section-tag">Portfolio</div>
-      <h1>Real Work.<br/><em>Real Results.</em></h1>
-      <p>Landing pages, AI chatbots, funnels, and automation systems I've built for US, UK & Canada clients.</p>
-    </div>
-  </section>
-
-  <section class="section bg-white">
-    <div class="container">
-
-      <div class="portfolio-stats">
-        <div class="pstat"><strong>50+</strong><span>Projects Completed</span></div>
-        <div class="pstat"><strong>5.0★</strong><span>Average Rating</span></div>
-        <div class="pstat"><strong>100%</strong><span>Client Satisfaction</span></div>
-        <div class="pstat"><strong>3+</strong><span>Years Experience</span></div>
-      </div>
-
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="landing">Landing Pages</button>
-        <button class="filter-btn" data-filter="ghl">GoHighLevel</button>
-        <button class="filter-btn" data-filter="ai">AI & Chatbots</button>
-        <button class="filter-btn" data-filter="email">Email</button>
-        <button class="filter-btn" data-filter="funnel">Funnels</button>
-      </div>
-
-      <div class="portfolio-grid">
-
-        <!-- 1. CONCRETE CONSTRUCTION -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-construction.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Construction</span></div>
-            <img src="Mockup_Real_estate.jpg" alt="Concrete Construction Landing Page"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Construction — Lead Generation</div>
-            <h3>Concrete Construction Lead Generation Page — ISCHBA</h3>
-            <p>Full lead gen landing page for a US concrete construction company — services showcase, 4-step process, free estimate form, and CRM automation built inside GoHighLevel. Replaced word-of-mouth with a consistent online lead pipeline.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span class="orange">Lead</span>Gen System</div>
-              <div class="result-item"><span class="orange">CRM</span>Synced</div>
-              <div class="result-item"><span class="orange">5★</span>Rating</div>
-            </div>
-            <a href="case-study-construction.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
+      <div class="cs-hero-inner">
+        <a href="portfolio.html" class="cs-back">← Back to Portfolio</a>
+        <div class="cs-tags">
+          <span class="cs-tag">Real Estate</span>
+          <span class="cs-tag">Agent Recruitment</span>
+          <span class="cs-tag">Landing Page</span>
+          <span class="cs-tag">Lead Generation</span>
         </div>
-
-        <!-- 2. AI CHATBOT -->
-        <div class="portfolio-card reveal" data-cat="ai" onclick="window.location='case-study-chatbot.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>AI Integration</span></div>
-            <img src="mockup-chatbot.jpg" alt="AI-Powered Business Chatbot"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">AI Integration</div>
-            <h3>AI-Powered Business Chatbot for Directory Platform</h3>
-            <p>Custom-trained AI business agent for a client's directory platform — designed to turn website visitors into qualified leads. Each business on the directory gets its own AI assistant trained on their services.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span class="purple">AI</span>Powered</div>
-              <div class="result-item"><span class="purple">24/7</span>Automated</div>
-              <div class="result-item"><span class="purple">VIP</span>Lead Flow</div>
-            </div>
-            <a href="case-study-chatbot.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 3. HERBAL HEALTH -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-herbal.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Landing Page</span></div>
-            <img src="mockup-herbal.jpg" alt="Herbal Health Landing Page"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Health & Wellness</div>
-            <h3>Herbal Health Product Landing Page</h3>
-            <p>Full landing page for a premium herbal health brand — hero section, product showcase, testimonials, FAQ, and conversion-optimized CTAs built inside GoHighLevel.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>GHL</span>Built</div>
-              <div class="result-item"><span>Full</span>Page Design</div>
-              <div class="result-item"><span>CRO</span>Optimised</div>
-            </div>
-            <a href="case-study-herbal.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 4. HEALTH CLINIC -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-clinic.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Landing Page</span></div>
-            <img src="mockup-clinic.jpg" alt="Restorative Health & Wellness Clinic"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Health & Wellness Clinic</div>
-            <h3>Restorative Health & Wellness Clinic</h3>
-            <p>Complete website and landing page for a health clinic — services, team profiles, testimonials, partner logos, and a contact form with full GHL integration and automated follow-up.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>GHL</span>Integrated</div>
-              <div class="result-item"><span>Auto</span>Follow-up</div>
-              <div class="result-item"><span>Multi</span>Section</div>
-            </div>
-            <a href="case-study-clinic.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 5. REAL ESTATE -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-realestate.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Real Estate</span></div>
-            <img src="mockup-realestate.jpg" alt="Real Estate Landing Page Mockup"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Real Estate</div>
-            <h3>All Cities Real Estate Agent Page</h3>
-            <p>Professional real estate landing page in GHL — property listings, partner logos (Zillow, Chase, RE/MAX), agent team profiles, client testimonials, and lead capture form with CRM sync.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>GHL</span>Built</div>
-              <div class="result-item"><span>Lead</span>Capture</div>
-              <div class="result-item"><span>CRM</span>Synced</div>
-            </div>
-            <a href="case-study-realestate.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 6. PHOTOGRAPHY COURSE -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-photography.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Course Page</span></div>
-            <img src="Photography%20Mockup.jpg" alt="Mastering Photography Course Landing Page"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Education — Course Launch</div>
-            <h3>Mastering Photography Course Landing Page — Scott Spencer</h3>
-            <p>Full course landing page built in GHL — hero section, instructor bio, course overview with 6 modules, what you'll get, client testimonials, 3-tier pricing ($69/$99/$179), FAQ, and a final enrollment CTA. 1,000+ students enrolled.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span class="green">1,000+</span>Students</div>
-              <div class="result-item"><span class="green">300+</span>Reviews</div>
-              <div class="result-item"><span class="green">99%</span>Satisfaction</div>
-            </div>
-            <a href="case-study-photography.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 7. PRECISION AI -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-precisionai.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>AI Marketing</span></div>
-            <img src="AIPRECIS_LANDING_PAGE_mockup.jpg" alt="Precision AI Growth Landing Page"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">AI Marketing — Lead Generation</div>
-            <h3>AI Marketing Landing Page — Precision AI Growth</h3>
-            <p>Full landing page for an AI marketing agency — hero with 24/7 AI answering agent offer, 4 AI service blocks (market analysis, campaigns, social media, skills training), FAQ, and Google-verified testimonials. Built inside GoHighLevel.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span class="purple">AI</span>Powered</div>
-              <div class="result-item"><span class="purple">24/7</span>Agent</div>
-              <div class="result-item"><span class="purple">GHL</span>Built</div>
-            </div>
-            <a href="case-study-precisionai.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 8. PATERNITY LAB -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-paternitylab.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Healthcare</span></div>
-            <img src="PaternityLabLandingPageDesign_mockup.jpg" alt="PaternityLab DNA Testing Landing Page"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Healthcare — DNA Testing</div>
-            <h3>DNA Paternity Testing Landing Page — PaternityLab.com</h3>
-            <p>Full landing page for a DNA testing lab — hero with order CTA, 4 test types (Home, Immigration, Legal, Prenatal), accreditation badges, lab difference section, local facilities, and client reviews. Built inside GoHighLevel.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span class="green">99.99%</span>Accuracy</div>
-              <div class="result-item"><span class="green">4</span>Test Types</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-paternitylab.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 9. MOTORCYCLE MASTERY -->
-        <div class="portfolio-card reveal" data-cat="funnel" onclick="window.location='case-study-motorcycle.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Opt-in Page</span></div>
-            <img src="OptinPageMotorcycle_Masterymockup.jpg" alt="Motorcycle Mastery Opt-in Landing Page"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Lead Generation — Opt-in Funnel</div>
-            <h3>Motorcycle Mastery Free Guide Opt-in Page — Petrolhead</h3>
-            <p>Full lead capture opt-in page for a motorcycle training brand — hero with free $97 guide offer, 6 chapter previews, 38K subscriber social proof, author bio, real testimonials, FAQ, and a multi-CTA funnel built inside GoHighLevel.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span class="green">38K</span>Subscribers</div>
-              <div class="result-item"><span class="green">Free</span>Lead Magnet</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-motorcycle.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 10. COACHING & SPEAKER CONFERENCE -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-coaching.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Event Page</span></div>
-            <img src="Mockup_coaches.jpg" alt="Coaching & Speaker Conference Landing Page"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Coaching & Events</div>
-            <h3>Coaching & Speaker Conference Landing Page — Roventa 2025</h3>
-            <p>Complete event registration page for a global conference — speaker profiles, 3-day schedule, tiered ticket pricing ($99/$199/$399), sponsor showcase, and testimonials built inside GoHighLevel.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span class="green">3-Day</span>Schedule</div>
-              <div class="result-item"><span class="green">Ticket</span>Integrated</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-coaching.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 11. BLUE HAWK AUTOMATION -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-bluehawk.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Algo Trading</span></div>
-            <img src="bluehawkautomationmockup.jpg" alt="Blue Hawk Automation Website"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Finance — Algorithmic Trading</div>
-            <h3>Blue Hawk Automation — Algorithmic Trading Platform</h3>
-            <p>Full website for an Australia-based algo trading company — 5-way opportunity comparison, License & Funded Account services, trading case studies, team profiles, client testimonials, FAQ, and community CTA.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>5</span>Opportunity Types</div>
-              <div class="result-item"><span>🇦🇺</span>Australia</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-bluehawk.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 12. TIFFANY THE LENDER -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-tiffany.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Mortgage & Lending</span></div>
-            <img src="Tiffany_landing%20page_Mockup.jpg" alt="Tiffany The Lender Landing Page"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Real Estate — Mortgage Lending</div>
-            <h3>Tiffany The Lender — Homeownership & Generational Wealth</h3>
-            <p>Premium mortgage landing page — video-led hero, AI chatbot, qualified vs non-qualified mortgage products, family video testimonials, founder bio, 8+ FAQ, and pre-qualification CTA. Black & gold luxury design.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>AI</span>Chatbot</div>
-              <div class="result-item"><span>2</span>Product Types</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-tiffany.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 13. VITAL VIRTUALS -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-vital-virtuals.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Healthcare</span></div>
-            <img src="Vital_landing_page_Mockup.jpg" alt="Vital Virtuals Healthcare VA Website"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Healthcare — Virtual Assistants</div>
-            <h3>Vital Virtuals — Healthcare Virtual Assistant Website</h3>
-            <p>Complete healthcare staffing website — HIPAA-compliant virtual scribes, 70% documentation time reduction, AI vs live scribe comparison table, 4 VA service types, pricing plans, and discovery call booking form.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span class="green">70%</span>Doc Time Saved</div>
-              <div class="result-item"><span>HIPAA</span>Compliant</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-vital-virtuals.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 14. DIGITAL LEAD MARKETING -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-digital-lead-marketing.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Pricing Page</span></div>
-            <img src="digitallead_marketing_pricing_page_mockup.jpg" alt="Digital Lead Marketing Pricing Page"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Digital Marketing — CRM & Pricing</div>
-            <h3>Digital Lead Marketing — CRM & Pricing Page</h3>
-            <p>Clean pricing page for a digital marketing agency — DLM Lead Connector CRM at $149/mo with 60-day free trial, Monthly/Yearly toggle, 3-tier ad management plans (Standard/Premium/Professional), and transparent pricing philosophy.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>60</span>Day Free Trial</div>
-              <div class="result-item"><span>3</span>Service Tiers</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-digital-lead-marketing.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 15. TRANSFORMING LIVES DIGITALLY -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-transforming.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Finance & EdTech</span></div>
-            <img src="Transforming_digital_Mockup.jpg" alt="Transforming Lives Digitally Platform"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Finance — Course Platform</div>
-            <h3>Transforming Lives Digitally — Financial Literacy Platform</h3>
-            <p>Full AI-powered financial literacy platform — crypto, stocks, and forex learning tracks, 4-tier pricing ($99–$139), AI tools, live workshops, affiliate programme, and a 3-step onboarding flow built inside GoHighLevel.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>4</span>Pricing Tiers</div>
-              <div class="result-item"><span>AI</span>Integrated</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-transforming.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 16. LEGAL LEAD MARKETING -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-legal-lead.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Legal / AI</span></div>
-            <img src="Legal_Lead_Marketingmockup.jpg" alt="Legal Lead AI Marketing System"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Legal — AI Marketing & Intake</div>
-            <h3>Legal Lead — AI Marketing & Intake System for Law Firms</h3>
-            <p>Complete AI-powered marketing and intake system for solo lawyers and SME law firms — AI receptionist, SEO, social media management, reputation monitoring, CRM automation, and 24/7 lead capture.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>24/7</span>AI Intake</div>
-              <div class="result-item"><span>6</span>Components</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-legal-lead.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 17. PRO STUDIO -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-pro-studio.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Real Estate Media</span></div>
-            <img src="PRO_STUDIO_Mockup.jpg" alt="Pro Studio Real Estate Media Website"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Real Estate — Media & Photography</div>
-            <h3>Pro Studio — Architectural-Grade Real Estate Media Website</h3>
-            <p>Premium real estate media website for a Toronto agency — 6 media services (photography, 4K video, 3D Matterport, drone, reels, floor plans), curated packages, real listing showcase, and 24hr delivery promise built inside GoHighLevel.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>6</span>Services</div>
-              <div class="result-item"><span>24hr</span>Delivery</div>
-              <div class="result-item"><span class="green">🇨🇦</span>Toronto</div>
-            </div>
-            <a href="case-study-pro-studio.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 18. CLICKUP FUNNELS -->
-        <div class="portfolio-card reveal" data-cat="funnel" onclick="window.location='case-study-clickup-funnels.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Sales Funnel</span></div>
-            <img src="Clickupmockup.jpg" alt="ClickUp Funnels DFY Sales Funnel System"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Coaching — DFY Sales Funnel</div>
-            <h3>ClickUp Funnels — DFY Sales Funnel System for Coaches</h3>
-            <p>100% done-for-you sales funnel landing page for coaches and course creators — offer mapping, copy, funnel design, email automation, tech integration, and 90-day optimisation. Live and converting in 30 days.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>DFY</span>Done For You</div>
-              <div class="result-item"><span>30</span>Days to Live</div>
-              <div class="result-item"><span class="green">24/7</span>Running</div>
-            </div>
-            <a href="case-study-clickup-funnels.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 20. REAL — AGENT RECRUITMENT -->
-        <div class="portfolio-card reveal" data-cat="landing" onclick="window.location='case-study-real-estate-property.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>Agent Recruitment</span></div>
-            <img src="RealEstatePropertyLandingPagemockup.jpg" alt="Real Agent Recruitment Landing Page"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">Real Estate — Agent Recruitment</div>
-            <h3>Real — Top Producing Agent Recruitment Landing Page</h3>
-            <p>High-converting agent recruitment page — 85% commission splits, Real Academy training stats (114 replays, 350+ hours), 3 value proposition sections, stock rewards video, and 7 consultation CTAs built inside GoHighLevel.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span>85%</span>Commission Split</div>
-              <div class="result-item"><span>350+</span>Training Hours</div>
-              <div class="result-item"><span class="green">5★</span>Rating</div>
-            </div>
-            <a href="case-study-real-estate-property.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 21. VOICE AI AGENT - FEATURED -->
-        <div class="portfolio-card reveal" data-cat="ai" onclick="window.open('https://connect.pabbly.com/v2/app/workflow/share/DUVSYARTAWJUHlQ-DmtTdAwYAgYDWgRnV04AEgQLBn5SHAVQUBEMZg9DUDpTAAVkXhcEblQLAWAOGgAEBFIBcgEbVmpTUFQuWxYGfQFYDj0NU1J6BGU#','_blank')" style="border: 2px solid #6C3FD8; position:relative; cursor:pointer;">
-          <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#6C3FD8,#4B2AAD);color:white;padding:0.3rem 1.2rem;border-radius:20px;font-size:0.72rem;font-weight:700;letter-spacing:1px;white-space:nowrap;z-index:10;">⭐ FEATURED PROJECT</div>
-          <div class="pcard-img" style="height:240px;background:#0f1923;">
-            <div class="pcard-overlay"><span>Voice AI + CRM</span></div>
-            <img src="pabbly-workflow.png" alt="Pabbly Voice AI Automation Workflow" style="width:100%;height:100%;object-fit:cover;object-position:center;"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag" style="color:#6C3FD8;">Voice AI + Automation</div>
-            <h3>Voice AI Agent → Automatic Lead Calling & CRM Integration</h3>
-            <p>Built a 20+ step Pabbly automation for a client — their Voice AI agent automatically calls new leads, logs call data to Google Sheets, filters by response, and syncs qualified leads directly into their CRM. Zero manual work.</p>
-            <div style="margin-bottom:1rem;">
-              <a href="https://connect.pabbly.com/v2/app/workflow/share/DUVSYARTAWJUHlQ-DmtTdAwYAgYDWgRnV04AEgQLBn5SHAVQUBEMZg9DUDpTAAVkXhcEblQLAWAOGgAEBFIBcgEbVmpTUFQuWxYGfQFYDj0NU1J6BGU#" target="_blank" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:0.5rem;background:#6C3FD8;color:white;padding:0.5rem 1.2rem;border-radius:8px;font-size:0.82rem;font-weight:700;text-decoration:none;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">🔗 View Live Workflow →</a>
-            </div>
-            <div class="pcard-results">
-              <div class="result-item"><span class="purple">20+</span>Steps</div>
-              <div class="result-item"><span class="purple">Auto</span>Calling</div>
-              <div class="result-item"><span class="purple">CRM</span>Synced</div>
-              <div class="result-item"><span class="purple">24/7</span>Running</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 20. GHL CRM BUILDOUT -->
-        <div class="portfolio-card reveal" data-cat="ghl" onclick="window.location='case-study-ghl-coaching.html'" style="cursor:pointer;">
-          <div class="pcard-visual bg-ghl">
-            <div class="pcard-overlay"><span>GHL Automation</span></div>
-            <div class="pcard-visual-inner">
-              <div class="pcard-visual-icon">⚡</div>
-              <div class="pcard-visual-label">Full GHL Buildout</div>
-              <div class="pcard-visual-stats">
-                <div class="pcard-visual-stat"><strong>↑300%</strong><span>Follow-up</span></div>
-                <div class="pcard-visual-stat"><strong>5 min</strong><span>Response</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">CRM Automation</div>
-            <h3>Full GHL Buildout for Coaching Business</h3>
-            <p>Complete GoHighLevel setup — CRM, automated follow-up sequences, calendar booking, and pipeline configuration. Reduced lead response time from 24hrs to under 5 minutes.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span class="green">↑300%</span>Follow-up Rate</div>
-              <div class="result-item"><span class="green">5 min</span>Response Time</div>
-            </div>
-            <a href="case-study-ghl-coaching.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 21. GHL STATUS UPDATE WORKFLOW -->
-        <div class="portfolio-card reveal" data-cat="ghl" onclick="window.location='case-study-ghl-status.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>GHL Workflow</span></div>
-            <img src="ghl-status-workflow-branches.jpg" alt="GoHighLevel Status Update Workflow"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">GoHighLevel — Workflow Automation</div>
-            <h3>Appointment Status Update Workflow — 6-Branch Pipeline Automation</h3>
-            <p>Built a multi-branch GHL workflow handling 6 appointment outcomes — Unable to Contact, Contacted, No Show, Showed, Sold, and Unqualified. Each branch auto-updates pipeline stage, tags the contact, sends Thank You email + SMS, requests reviews, and nurtures leads.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span class="green">6</span>Branch Logic</div>
-              <div class="result-item"><span class="green">Auto</span>Pipeline Update</div>
-              <div class="result-item"><span class="green">SMS</span>+ Email</div>
-              <div class="result-item"><span class="green">Zero</span>Manual Work</div>
-            </div>
-            <a href="case-study-ghl-status.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 22. GHL LEAD NURTURE WORKFLOW -->
-        <div class="portfolio-card reveal" data-cat="ghl" onclick="window.location='case-study-ghl-nurture.html'" style="cursor:pointer;">
-          <div class="pcard-img">
-            <div class="pcard-overlay"><span>GHL Workflow</span></div>
-            <img src="ghl-lead-nurture-workflow.png" alt="GoHighLevel Lead Nurture Workflow"/>
-          </div>
-          <div class="pcard-body">
-            <div class="pcard-tag">GoHighLevel — Lead Nurture</div>
-            <h3>Lead Nurture Workflow — SMS, Email & Video Follow-Up Sequence</h3>
-            <p>Built a multi-trigger GHL nurture workflow — fires on form submit, appointment booking, or lead reply. Sends Welcome SMS + Email, waits, checks for reply, then follows up with a video email if no response. Smart branching ends the sequence the moment a lead engages.</p>
-            <div class="pcard-results">
-              <div class="result-item"><span class="green">3</span>Triggers</div>
-              <div class="result-item"><span class="green">Auto</span>SMS + Email</div>
-              <div class="result-item"><span class="green">Video</span>Follow-Up</div>
-              <div class="result-item"><span class="green">Smart</span>Branching</div>
-            </div>
-            <a href="case-study-ghl-nurture.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIAL STRIP -->
-  <section class="section bg-light">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Client Love</div>
-        <h2>What Clients Say About <em>The Results</em></h2>
-      </div>
-      <div class="cards-grid">
-        <div class="card reveal">
-          <div style="color:#F59E0B;margin-bottom:0.8rem;">★★★★★</div>
-          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;font-style:italic;margin-bottom:1.2rem;">"Samuel's professionalism and attention to detail consistently exceed expectations. Our GHL system now runs on autopilot."</p>
-          <div style="display:flex;align-items:center;gap:0.8rem;">
-            <div style="width:38px;height:38px;border-radius:50%;background:var(--blue);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;">A</div>
-            <div><strong style="font-size:0.88rem;">acresIdual</strong><div style="font-size:0.75rem;color:var(--text-muted);">🇺🇸 United States</div></div>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div style="color:#F59E0B;margin-bottom:0.8rem;">★★★★★</div>
-          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;font-style:italic;margin-bottom:1.2rem;">"He goes above and beyond to make sure I am satisfied. Best investment I've made for my business automation."</p>
-          <div style="display:flex;align-items:center;gap:0.8rem;">
-            <div style="width:38px;height:38px;border-radius:50%;background:var(--blue);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;">K</div>
-            <div><strong style="font-size:0.88rem;">kenwade33</strong><div style="font-size:0.75rem;color:var(--text-muted);">🇺🇸 United States</div></div>
-          </div>
-        </div>
-        <div class="card reveal">
-          <div style="color:#F59E0B;margin-bottom:0.8rem;">★★★★★</div>
-          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;font-style:italic;margin-bottom:1.2rem;">"Outstanding work on our email sequences. Open rates jumped from 18% to 47%. Samuel knows his craft."</p>
-          <div style="display:flex;align-items:center;gap:0.8rem;">
-            <div style="width:38px;height:38px;border-radius:50%;background:var(--blue);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;">M</div>
-            <div><strong style="font-size:0.88rem;">markdigital</strong><div style="font-size:0.75rem;color:var(--text-muted);">🇬🇧 United Kingdom</div></div>
-          </div>
+        <h1>Real — Top Producing Agent<br/><em>Recruitment Landing Page</em></h1>
+        <p style="color:rgba(255,255,255,.75);font-size:1.05rem;line-height:1.7;margin-bottom:2rem;">A high-converting real estate agent recruitment landing page for Real — targeting ambitious agents held back by poor commission splits and lack of support, and showing them a better path through industry-leading splits, state-of-the-art technology, and stock reward programs.</p>
+        <div class="cs-hero-meta">
+          <div class="cs-meta-item"><span>Industry</span><strong>Real Estate Brokerage</strong></div>
+          <div class="cs-meta-item"><span>Client</span><strong>Real</strong></div>
+          <div class="cs-meta-item"><span>Timeline</span><strong>7 Days</strong></div>
+          <div class="cs-meta-item"><span>Platform</span><strong>GoHighLevel</strong></div>
+          <div class="cs-meta-item"><span>Rating</span><strong>⭐⭐⭐⭐⭐ 5.0</strong></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-section">
-    <div class="container cta-inner">
-      <h2>Want Results Like These<br/>for Your Business?</h2>
-      <p>Let's talk about your project and what we can build together.</p>
-      <div class="cta-btns">
-        <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-white large">📅 Book a Free Strategy Call</a>
-        <a href="contact.html" class="btn-secondary large" style="color:white;border-color:white;">Start a Project →</a>
+  <section class="section bg-white" style="padding-top:0;padding-bottom:0;">
+    <div class="container">
+      <div class="cs-results-banner reveal">
+        <div class="cs-result"><div class="cs-result-num cyan">85%</div><div class="cs-result-label">Commission Split Offered</div></div>
+        <div class="cs-result"><div class="cs-result-num cyan">114</div><div class="cs-result-label">Mastermind Replays Added</div></div>
+        <div class="cs-result"><div class="cs-result-num cyan">350+</div><div class="cs-result-label">On-Demand Training Hours</div></div>
+        <div class="cs-result"><div class="cs-result-num green">5★</div><div class="cs-result-label">Client Rating</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white" style="padding-top:2rem;">
+    <div class="container">
+      <div class="cs-content">
+
+        <div class="cs-section reveal">
+          <h2>The <em>Project</em></h2>
+          <p>Real is a modern real estate brokerage that needed a recruitment landing page to attract high-performing agents who were frustrated with their current brokerage — poor commission splits, monthly fees, lack of training, and no technology support.</p>
+          <p>The page needed to speak directly to ambitious agents ready to become top producers, clearly present Real's three core value propositions, and drive consultation bookings through multiple strategically placed CTAs.</p>
+          <p>I built the full page inside <strong>GoHighLevel</strong> — clean white design with cyan accents, luxury property photography, agent training stats, three value proposition sections with alternating image layouts, and a video section showcasing the stock rewards programme.</p>
+        </div>
+
+        <div class="reveal">
+          <img src="RealEstatePropertyLandingPagemockup.jpg" alt="Real Agent Recruitment Landing Page Mockup" class="cs-img-full"/>
+          <p class="cs-img-caption">Device mockup — Real Top Producing Agent Recruitment Landing Page</p>
+        </div>
+
+        <div class="reveal">
+          <img src="RealEstate_PropertyLandingPage.webp" alt="Real Agent Recruitment Full Page Screenshot" class="cs-img-full"/>
+          <p class="cs-img-caption">Full page screenshot — live inside GoHighLevel</p>
+        </div>
+
+        <div class="cs-section reveal">
+          <h2>What I <em>Built</em></h2>
+          <div class="feature-grid">
+            <div class="feature-box"><h4>🏠 Hero Section</h4><p>"Ready To Become A Top Producing Agent?" — bold headline with luxury property background, pain-point subtext ("Don't be held back by commission splits and lack of support"), and a prominent Schedule Your Consult CTA.</p></div>
+            <div class="feature-box"><h4>📖 Unlocking Realtor Success</h4><p>Narrative section positioning Real as the solution — explaining why agents fail at other brokerages, and how Real's network, training, and commission structure creates top producers consistently.</p></div>
+            <div class="feature-box"><h4>📊 Agent Training Stats Bar</h4><p>Three bold numbers: 114 mastermind discussion replays, 20+ live interactive classes per week, and 350+ hours of on-demand training — establishing Real Academy as a serious competitive advantage.</p></div>
+            <div class="feature-box"><h4>💰 Value Prop 1: Industry Leading Splits</h4><p>85%/15% commission split with a $12,000 cap, no monthly fees, keep 100% after capping. Presented with a luxury property image and a direct Schedule Your Consult button.</p></div>
+            <div class="feature-box"><h4>💻 Value Prop 2: State-of-the-Art Technology</h4><p>Leverage tools to manage deals, stay connected, and receive support — positioned alongside a second luxury property visual. Tech advantage framed as a productivity and income multiplier.</p></div>
+            <div class="feature-box"><h4>📈 Value Prop 3: Pre-Cap Stock Purchasing Plan + Bonus</h4><p>Agents can invest up to 5% of pre-cap commission in company stock, plus a 15% bonus at anniversary — making Real feel like a long-term wealth-building partner, not just a brokerage.</p></div>
+            <div class="feature-box"><h4>🎬 Video Section</h4><p>"What Makes it Special? Watch Video" — embedded video showcasing the stock awards programme with a bold overlay: "Earn stock awards for capping and attracting agents." Drives emotional connection.</p></div>
+            <div class="feature-box"><h4>🎯 Multiple Schedule CTAs</h4><p>Seven strategically placed "Schedule Your Consult" buttons throughout the page — ensuring no agent has to scroll far to take action once they're convinced.</p></div>
+          </div>
+        </div>
+
+        <div class="cs-section reveal">
+          <h2>Tools & <em>Integrations</em></h2>
+          <div class="tools-grid">
+            <div class="tool-badge">⚡ GoHighLevel</div>
+            <div class="tool-badge">🏠 Luxury Property Photography</div>
+            <div class="tool-badge">🎬 Video Embed</div>
+            <div class="tool-badge">📅 Consultation Booking</div>
+            <div class="tool-badge">📊 Stats Bar</div>
+            <div class="tool-badge">💰 Commission Structure Display</div>
+            <div class="tool-badge">📱 Mobile Optimised</div>
+            <div class="tool-badge">🎯 Multi-CTA Layout</div>
+          </div>
+        </div>
+
+        <div class="cs-testimonial reveal">
+          <div style="font-size:2rem;margin-bottom:1rem;">⭐⭐⭐⭐⭐</div>
+          <p>"Samuel built a recruitment page that speaks directly to the agents we want to attract. The commission split section, the training stats, and the stock rewards video all work together to make our value proposition crystal clear. Agent inquiries have been strong since launch."</p>
+          <strong>Real — Real Estate Brokerage</strong>
+          <span>Agent Recruitment Landing Page · GoHighLevel Build</span>
+        </div>
+
+        <div class="cs-cta reveal">
+          <h3>Need a Recruitment Page Like This?</h3>
+          <p>I'll build you a complete GoHighLevel landing page — designed to attract the right people, present your offer clearly, and drive consultation bookings.</p>
+          <div class="cs-cta-btns">
+            <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary large">📅 Book a Free Strategy Call</a>
+            <a href="portfolio.html" class="btn-secondary large">← View More Projects</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -614,9 +186,6 @@
     </div>
     <div class="footer-bottom"><div class="container">© 2026 Samuel Peter. All rights reserved.</div></div>
   </footer>
-
-  <script src="main.js"></script>
-  <script src="chatbot.js"></script>
-  <script src="exit-popup.js"></script>
+  <script src="main.js"></script><script src="chatbot.js"></script><script src="exit-popup.js"></script>
 </body>
 </html>
