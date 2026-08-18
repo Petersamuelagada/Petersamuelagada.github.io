@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -77,6 +77,36 @@
     /* Stats Animation */
     .counter { transition: all 2s ease-out; }
 
+  
+    /* Advanced Features Styles */
+    .calculator-card { background: #1B4FD8; color: white; padding: 3rem; border-radius: 20px; box-shadow: 0 20px 40px rgba(27,79,216,0.2); margin-top: 3rem; }
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .calc-input-group { margin-bottom: 1.5rem; }
+    .calc-input-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; opacity: 0.9; }
+    .calc-input-group input { width: 100%; padding: 1rem; border-radius: 8px; border: none; font-size: 1.1rem; font-weight: 700; color: #111827; }
+    .calc-result { background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.2); }
+    .calc-result h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; opacity: 0.8; }
+    .calc-amount { font-size: 3rem; font-weight: 800; color: #FFD700; margin-bottom: 0.5rem; }
+    
+    .system-peek-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .peek-card { background: white; border-radius: 16px; overflow: hidden; border: 1px solid #e5e7eb; transition: all 0.3s ease; }
+    .peek-card:hover { transform: translateY(-10px); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
+    .peek-img { width: 100%; height: 200px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; position: relative; overflow: hidden; }
+    .peek-img img { width: 100%; height: 100%; object-fit: cover; filter: blur(2px); opacity: 0.7; }
+    .peek-img::after { content: 'Proprietary Architecture'; position: absolute; background: rgba(0,0,0,0.6); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.7rem; }
+    .peek-content { padding: 1.5rem; }
+    
+    .case-study-card { background: white; padding: 2rem; border-radius: 16px; border-left: 5px solid #1B4FD8; margin-bottom: 2rem; }
+    .case-stats { display: flex; gap: 2rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #f3f4f6; }
+    .case-stat-item { flex: 1; }
+    .case-stat-val { display: block; font-size: 1.5rem; font-weight: 800; color: #1B4FD8; }
+    .case-stat-lbl { font-size: 0.75rem; color: #6b7280; text-transform: uppercase; font-weight: 700; }
+
+    .video-play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(27,79,216,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: white; transition: all 0.3s ease; z-index: 10; border: 4px solid white; }
+    .video-play-btn:hover { transform: translate(-50%, -50%) scale(1.1); background: #1B4FD8; }
+    
+    @media (max-width: 768px) { .calc-grid { grid-template-columns: 1fr; } }
+
   </style>
   <style>
     .faq-item.open .faq-answer { max-height: 300px !important; }
@@ -140,6 +170,9 @@
       </div>
       <div class="hero-photo-wrap">
         <div class="hero-photo-card">
+          
+
+
           <img src="peter-samuel.jpg" alt="Samuel Peter — GoHighLevel Expert" class="hero-img" style="width:100%;height:500px;object-fit:cover;object-position:center 12%;border-radius:0;"/>
           <div class="hero-photo-badge">
             <div class="badge-dot"></div>
@@ -263,6 +296,56 @@
     </div>
   </section>
 
+  
+  <!-- ROI CALCULATOR -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">The Cost of Inaction</div>
+        <h2>Calculate Your <em>Monthly Lead Leak</em></h2>
+        <p>Stop guessing. See exactly how much revenue is slipping through your fingers due to manual follow-up delays.</p>
+      </div>
+      <div class="calculator-card">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <div class="calc-input-group">
+              <label>Monthly Leads</label>
+              <input type="number" id="leads" value="100" oninput="calculateROI()">
+            </div>
+            <div class="calc-input-group">
+              <label>Average Customer Value ($)</label>
+              <input type="number" id="value" value="2000" oninput="calculateROI()">
+            </div>
+            <div class="calc-input-group">
+              <label>Current Closing Rate (%)</label>
+              <input type="number" id="rate" value="10" oninput="calculateROI()">
+            </div>
+          </div>
+          <div class="calc-result">
+            <h4>Estimated Monthly Revenue Leak</h4>
+            <div class="calc-amount" id="leak-amount">$60,000</div>
+            <p style="font-size: 0.9rem; opacity: 0.8;">*Based on a 30% lead loss due to manual follow-up lag.</p>
+            <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-white" style="margin-top: 2rem; display: inline-block;">Fix My Lead Leak Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function calculateROI() {
+      const leads = document.getElementById('leads').value;
+      const value = document.getElementById('value').value;
+      const rate = document.getElementById('rate').value / 100;
+      
+      // High-level assumption: 30% of leads are lost due to slow manual follow-up
+      const leakedLeads = leads * 0.3;
+      const lostRevenue = leakedLeads * rate * value;
+      
+      document.getElementById('leak-amount').innerText = '$' + Math.round(lostRevenue).toLocaleString();
+    }
+  </script>
+
   <!-- SOLUTION -->
   <section class="section bg-light">
     <div class="container">
@@ -358,6 +441,41 @@
     </div>
   </section>
 
+  
+  <!-- SYSTEM PEEK -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">A Look Inside</div>
+        <h2>The <em>Architectural</em> Standards</h2>
+        <p>I don't build "basic" setups. I build sophisticated ecosystems designed for high-volume performance.</p>
+      </div>
+      <div class="system-peek-grid">
+        <div class="peek-card">
+          <div class="peek-img"><img src="https://images.unsplash.com/photo-1551288049-bbda48658a7d?auto=format&fit=crop&q=80&w=800" alt="Workflow"></div>
+          <div class="peek-content">
+            <h4>Multi-Channel Speed-to-Lead</h4>
+            <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem;">Conditional logic architecture that engages leads across SMS, Email, and WhatsApp within 60 seconds.</p>
+          </div>
+        </div>
+        <div class="peek-card">
+          <div class="peek-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Dashboard"></div>
+          <div class="peek-content">
+            <h4>Custom Executive Dashboards</h4>
+            <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem;">Proprietary reporting layers built inside GHL to track ROI, CPA, and pipeline velocity in real-time.</p>
+          </div>
+        </div>
+        <div class="peek-card">
+          <div class="peek-img"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800" alt="AI Logic"></div>
+          <div class="peek-content">
+            <h4>AI Appointment Logic</h4>
+            <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem;">Sophisticated AI agent integration that qualifies prospects and books directly into your calendar 24/7.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- WHY WORK WITH ME -->
   <section class="about-strip">
     <div class="container about-strip-grid">
@@ -382,48 +500,72 @@
         <a href="about.html" class="btn-white">Read My Full Story</a>
       </div>
       <div class="about-strip-img reveal">
-        <img src="peter-samuel.jpg" alt="Samuel Peter" style="width:100%;height:520px;object-fit:cover;object-position:center 25%;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.2);"/>
+        
+
+
+          <img src="peter-samuel.jpg" alt="Samuel Peter" style="width:100%;height:520px;object-fit:cover;object-position:center 25%;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.2);"/>
       </div>
     </div>
   </section>
 
-  <!-- REAL REVIEWS -->
+  
+  <!-- CASE STUDIES -->
   <section class="section bg-white">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Verified Reviews</div>
-        <h2>What US & UK Clients Say<br/>After Working With Me ⭐</h2>
-        <p>Real reviews from real clients — verified on Fiverr.</p>
+        <div class="section-tag">Proven Results</div>
+        <h2>From Inefficient to <em>Automated</em></h2>
+        <p>Real transformations for high-growth agencies and service businesses.</p>
       </div>
-      <div style="max-width:340px;margin:0 auto 3rem;">
-        <div class="card reveal" style="padding:0.6rem;overflow:hidden;">
-          <video controls preload="metadata" poster="client-testimonial-poster.jpg" style="width:100%;border-radius:8px;display:block;">
-            <source src="client-testimonial.mp4" type="video/mp4">
-            Your browser doesn't support embedded video. <a href="client-testimonial.mp4">Watch the testimonial here.</a>
-          </video>
-        </div>
-        <p style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-top:0.8rem;">🎥 Video testimonial from a past client</p>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial reveal">
+      
+      <div class="case-study-card reveal">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+          <div style="max-width: 600px;">
+            <h3 style="color: #111827; margin-bottom: 1rem;">Scaling a US Real Estate Agency's Lead Conversion</h3>
+            <p style="color: #4b5563; line-height: 1.6;">The client was manually chasing leads from Facebook Ads, resulting in a 4-hour average response time and massive lead drop-off. I architected a full Speed-to-Lead GHL snapshot with automated SMS nurturing.</p>
+          </div>
           <div class="t-stars">★★★★★</div>
-          <p>"I've had the pleasure of working with Samuel on several projects, and each experience has been exceptional. His professionalism, attention to detail, and commitment to excellence consistently exceed my expectations. He delivers quality work every single time."</p>
-          <div class="t-author"><div class="t-avatar">A</div><div><strong>acresIdual 🇺🇸</strong><span>United States · Email Marketing & Automation</span></div></div>
         </div>
-        <div class="testimonial reveal">
-          <div class="t-stars">★★★★★</div>
-          <p>"This was my first time working with Samuel but it will not be my last. He is very professional, knowledgeable, thoughtful, and dedicated to providing an excellent delivery. I will recommend his services to everyone."</p>
-          <div class="t-author"><div class="t-avatar">A</div><div><strong>acresIdual 🇺🇸</strong><span>United States · CRM Automations & AI Agents</span></div></div>
-        </div>
-        <div class="testimonial reveal">
-          <div class="t-stars">★★★★★</div>
-          <p>"Samuel is an excellent professional. He has great ideas and is easy to work with. He goes above and beyond to make sure that I am satisfied with his work. I will not hesitate to recommend him to everyone looking for a professionally done project."</p>
-          <div class="t-author"><div class="t-avatar">K</div><div><strong>kenwade33 🇺🇸</strong><span>United States · GoHighLevel Setup</span></div></div>
+        <div class="case-stats">
+          <div class="case-stat-item">
+            <span class="case-stat-val">< 2 Mins</span>
+            <span class="case-stat-lbl">Response Time</span>
+          </div>
+          <div class="case-stat-item">
+            <span class="case-stat-val">+22%</span>
+            <span class="case-stat-lbl">Booked Calls</span>
+          </div>
+          <div class="case-stat-item">
+            <span class="case-stat-val">100%</span>
+            <span class="case-stat-lbl">Automation</span>
+          </div>
         </div>
       </div>
-      <div style="text-align:center;margin-top:2.5rem;">
-        <a href="portfolio.html" class="btn-primary">View My Work & Results →</a>
+
+      <div class="case-study-card reveal">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+          <div style="max-width: 600px;">
+            <h3 style="color: #111827; margin-bottom: 1rem;">Enterprise CRM Migration & Infrastructure Build</h3>
+            <p style="color: #4b5563; line-height: 1.6;">A UK-based coaching firm was struggling with a messy HubSpot setup. I migrated their entire operation to GHL, building custom sub-accounts and multi-channel pipelines for their worldwide team.</p>
+          </div>
+          <div class="t-stars">★★★★★</div>
+        </div>
+        <div class="case-stats">
+          <div class="case-stat-item">
+            <span class="case-stat-val">14 Days</span>
+            <span class="case-stat-lbl">Migration Time</span>
+          </div>
+          <div class="case-stat-item">
+            <span class="case-stat-val">30+</span>
+            <span class="case-stat-lbl">Workflows Built</span>
+          </div>
+          <div class="case-stat-item">
+            <span class="case-stat-val">Zero</span>
+            <span class="case-stat-lbl">Lead Leakage</span>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
