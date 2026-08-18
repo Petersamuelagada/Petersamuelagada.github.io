@@ -73,11 +73,12 @@
     .step-card { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e5e7eb; position: relative; transition: all 0.3s ease; }
     .step-num { position: absolute; top: -15px; left: 20px; background: #1B4FD8; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(27,79,216,0.3); }
     
-    .system-peek-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
-    .peek-card { background: white; border-radius: 12px; overflow: hidden; border: 1px solid #e5e7eb; }
-    .peek-img { width: 100%; height: 180px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; color: #9ca3af; position: relative; }
-    .peek-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; filter: grayscale(100%); }
-    .peek-badge { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
+    .system-peek-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .peek-card { background: white; border-radius: 16px; overflow: hidden; border: 1px solid #e5e7eb; transition: transform 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .peek-card:hover { transform: translateY(-5px); }
+    .peek-img { width: 100%; height: 200px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; position: relative; }
+    .peek-img img { width: 100%; height: 100%; object-fit: cover; }
+    .peek-badge { position: absolute; top: 12px; right: 12px; background: #1B4FD8; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
     
     .case-study-card { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e5e7eb; border-left: 4px solid #1B4FD8; margin-bottom: 1.5rem; }
     .case-stats { display: flex; gap: 1.5rem; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid #f3f4f6; }
@@ -439,11 +440,7 @@
     </div>
   </section>
 
-  <!-- ABOUT STRIP -->
-  <section class="section bg-blue">
-    <div class="container about-strip">
-      <div class="about-strip-text reveal">
-        
+  
   <!-- SYSTEM PEEK -->
   <section class="section bg-light">
     <div class="container">
@@ -458,9 +455,9 @@
             <span class="peek-badge">Live System</span>
             <img src="https://images.unsplash.com/photo-1551288049-bbda48658a7d?auto=format&fit=crop&q=80&w=800" alt="Workflow">
           </div>
-          <div style="padding:1.5rem;">
+          <div style="padding:2rem;">
             <h4 style="font-weight:700;">Multi-Channel Speed-to-Lead</h4>
-            <p style="font-size: 0.8rem; color: #6b7280; margin-top: 0.5rem;">Engages leads across SMS, Email, and WhatsApp within 60 seconds.</p>
+            <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.8rem; line-height:1.6;">Engages leads across SMS, Email, and WhatsApp within 60 seconds to maximize conversion.</p>
           </div>
         </div>
         <div class="peek-card">
@@ -468,9 +465,9 @@
             <span class="peek-badge">Dashboard</span>
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Dashboard">
           </div>
-          <div style="padding:1.5rem;">
+          <div style="padding:2rem;">
             <h4 style="font-weight:700;">Executive ROI Reporting</h4>
-            <p style="font-size: 0.8rem; color: #6b7280; margin-top: 0.5rem;">Proprietary layers built to track ROI and pipeline velocity in real-time.</p>
+            <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.8rem; line-height:1.6;">Proprietary layers built to track ROI, CPA, and pipeline velocity in real-time.</p>
           </div>
         </div>
         <div class="peek-card">
@@ -478,15 +475,19 @@
             <span class="peek-badge">AI Logic</span>
             <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800" alt="AI Logic">
           </div>
-          <div style="padding:1.5rem;">
+          <div style="padding:2rem;">
             <h4 style="font-weight:700;">AI Appointment Booking</h4>
-            <p style="font-size: 0.8rem; color: #6b7280; margin-top: 0.5rem;">AI agent integration that qualifies and books prospects 24/7.</p>
+            <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.8rem; line-height:1.6;">AI agent integration that qualifies prospects and books directly into your calendar 24/7.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ABOUT STRIP -->
+  <section class="section bg-blue">
+    <div class="container about-strip">
+      <div class="about-strip-text reveal">
         <div class="section-tag light">Why Work With Me</div>
         <h2 style="color:#fff">I Don't Disappear<br/>After <em>Handover.</em></h2>
         <p style="color:rgba(255,255,255,0.8)">Most freelancers build something, hand it over, and vanish. I stay until everything is working the way it should. If something breaks after delivery — I want to know about it. Your results are my reputation, and I take that seriously.</p>
