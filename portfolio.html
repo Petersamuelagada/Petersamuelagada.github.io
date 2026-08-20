@@ -158,49 +158,45 @@
 
   
 
-    .portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.8rem; }
-    .portfolio-card { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
-    .portfolio-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(27,79,216,0.15); border-color: var(--blue); }
-    .pcard-img { height: 220px; overflow: hidden; position: relative; }
-    .pcard-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.5s ease; }
-    .portfolio-card:hover .pcard-img img { transform: scale(1.05); }
-    .pcard-visual { height: 220px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-    .pcard-visual-inner { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.8rem; position: relative; z-index: 1; }
-    .pcard-visual-icon { font-size: 3.5rem; }
-    .pcard-visual-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
-    .pcard-visual-stats { display: flex; gap: 1.5rem; margin-top: 0.5rem; }
-    .pcard-visual-stat { text-align: center; }
-    .pcard-visual-stat strong { display: block; font-size: 1.3rem; font-weight: 800; color: white; }
-    .pcard-visual-stat span { font-size: 0.7rem; color: rgba(255,255,255,0.7); }
-    .bg-ghl { background: linear-gradient(135deg, #1B4FD8 0%, #0D1117 100%); }
-    .bg-email { background: linear-gradient(135deg, #0D1117 0%, #1B4FD8 60%, #3D6FE8 100%); }
-    .bg-ai { background: linear-gradient(135deg, #6C3FD8 0%, #2D1B8E 100%); }
-    .bg-funnel { background: linear-gradient(135deg, #1440B0 0%, #3D6FE8 100%); }
-    .bg-real { background: linear-gradient(135deg, #0D1117 0%, #1B4FD8 100%); }
-    .bg-health { background: linear-gradient(135deg, #0D7B5E 0%, #1B4FD8 100%); }
-    .bg-coaching { background: linear-gradient(135deg, #0A0F2E 0%, #1B4FD8 100%); }
-    .bg-construction { background: linear-gradient(135deg, #1A0A00 0%, #B45309 100%); }
-    .pcard-visual::before { content: ''; position: absolute; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.05); top: -60px; right: -60px; }
-    .pcard-visual::after { content: ''; position: absolute; width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,0.05); bottom: -30px; left: -30px; }
-    .pcard-overlay { position: absolute; top: 1rem; left: 1rem; z-index: 2; }
-    .pcard-overlay span { background: rgba(255,255,255,0.2); backdrop-filter: blur(8px); color: white; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.72rem; font-weight: 700; border: 1px solid rgba(255,255,255,0.3); }
-    .pcard-body { padding: 1.5rem; }
-    .pcard-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 0.4rem; }
-    .pcard-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.4; color: var(--text); }
-    .pcard-body p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem; }
-    .pcard-results { display: flex; gap: 1.2rem; border-top: 1px solid var(--border); padding-top: 0.9rem; flex-wrap: wrap; }
-    .result-item { font-size: 0.75rem; color: var(--text-muted); }
-    .result-item span { display: block; font-weight: 800; color: var(--blue); font-size: 1rem; }
-    .result-item span.green { color: #16A34A; }
-    .result-item span.purple { color: #6C3FD8; }
-    .result-item span.orange { color: #B45309; }
-    .portfolio-stats { display: flex; gap: 3rem; justify-content: center; padding: 2.5rem 0; margin-bottom: 3rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
-    .pstat { text-align: center; }
-    .pstat strong { display: block; font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--blue); }
-    .pstat span { font-size: 0.82rem; color: var(--text-muted); }
-    @media(max-width:1024px){ .portfolio-grid { grid-template-columns: repeat(2,1fr); } }
-    @media(max-width:600px){ .portfolio-grid { grid-template-columns: 1fr; } .portfolio-stats { gap: 1.5rem; } }
-  </style>
+    /* --- Portfolio Specific Visibility Fixes --- */
+    .hero h1 { color: #1B4FD8 !important; }
+    .hero p { color: #4b5563 !important; }
+    .hero { background: #f9fafb !important; padding: 6rem 0 !important; }
+    
+    .portfolio-stats { border: none !important; margin-bottom: 2rem !important; }
+    .pstat strong { color: #1B4FD8 !important; }
+    
+    .portfolio-grid { gap: 2.5rem !important; margin-top: 3rem !important; }
+    .peek-card { background: white !important; border: 1px solid #e5e7eb !important; border-radius: 16px !important; transition: all 0.4s ease !important; }
+    .peek-card:hover { transform: translateY(-10px) !important; border-color: #1B4FD8 !important; box-shadow: 0 20px 40px rgba(27,79,216,0.1) !important; }
+    
+    .peek-img { height: 250px !important; background: #f3f4f6 !important; }
+    .peek-badge { top: 15px !important; right: 15px !important; font-size: 0.65rem !important; }
+    
+    .logic-breakdown { 
+        display: block !important; 
+        margin-top: 1.5rem !important; 
+        padding-top: 1rem !important; 
+        border-top: 1px solid #f3f4f6 !important; 
+        font-size: 0.7rem !important; 
+        color: #1B4FD8 !important; 
+        font-weight: 800 !important; 
+        text-transform: uppercase !important; 
+        letter-spacing: 0.5px !important;
+    }
+    
+    .btn-primary { 
+        background: #1B4FD8 !important; 
+        color: white !important; 
+        padding: 0.8rem 1.5rem !important; 
+        border-radius: 8px !important; 
+        font-weight: 700 !important; 
+        text-decoration: none !important; 
+        display: inline-block !important;
+        transition: all 0.3s ease !important;
+    }
+    .btn-primary:hover { background: #153ea3 !important; transform: translateY(-2px) !important; }
+</style>
 </head>
 <body class="js-ready-check">
 <div class="fiverr-bar">
@@ -267,14 +263,14 @@
 <span class="peek-badge">Construction</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Construction — Lead Generation</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Concrete Construction Lead Generation Page — ISCHBA</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Concrete Construction Lead Generation Page — ISCHBA</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Full lead gen landing page for a US concrete construction company — services showcase, 4-step process, free estimate form, and CRM automation built inside GoHighLevel. Replaced word-of-mouth with a consistent online lead pipeline.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="orange">Lead</span>Gen System</div>
 <div class="result-item"><span class="orange">CRM</span>Synced</div>
 <div class="result-item"><span class="orange">5★</span>Rating</div>
 </div>
-<a class="btn-primary" href="case-study-construction.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-construction.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + LeadGen Logic</span></div>
 </div>
 <!-- 2. HERBAL HEALTH -->
@@ -285,14 +281,14 @@
 <span class="peek-badge">Landing Page</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Health &amp; Wellness</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Herbal Health Product Landing Page</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Herbal Health Product Landing Page</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Full landing page for a premium herbal health brand — hero section, product showcase, testimonials, FAQ, and conversion-optimized CTAs built inside GoHighLevel.</p>
 <div class="pcard-results">
 <div class="result-item"><span>GHL</span>Built</div>
 <div class="result-item"><span>Full</span>Page Design</div>
 <div class="result-item"><span>CRO</span>Optimised</div>
 </div>
-<a class="btn-primary" href="case-study-herbal.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-herbal.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 3. HEALTH CLINIC -->
@@ -303,14 +299,14 @@
 <span class="peek-badge">Landing Page</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Health &amp; Wellness Clinic</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Restorative Health &amp; Wellness Clinic</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Restorative Health &amp; Wellness Clinic</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Complete website and landing page for a health clinic — services, team profiles, testimonials, partner logos, and a contact form with full GHL integration and automated follow-up.</p>
 <div class="pcard-results">
 <div class="result-item"><span>GHL</span>Integrated</div>
 <div class="result-item"><span>Auto</span>Follow-up</div>
 <div class="result-item"><span>Multi</span>Section</div>
 </div>
-<a class="btn-primary" href="case-study-clinic.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-clinic.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 4. REAL ESTATE -->
@@ -321,14 +317,14 @@
 <span class="peek-badge">Real Estate</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Real Estate</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">All Cities Real Estate Agent Page</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">All Cities Real Estate Agent Page</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Professional real estate landing page in GHL — property listings, partner logos (Zillow, Chase, RE/MAX), agent team profiles, client testimonials, and lead capture form with CRM sync.</p>
 <div class="pcard-results">
 <div class="result-item"><span>GHL</span>Built</div>
 <div class="result-item"><span>Lead</span>Capture</div>
 <div class="result-item"><span>CRM</span>Synced</div>
 </div>
-<a class="btn-primary" href="case-study-realestate.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-realestate.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
 </div>
 <!-- 5. PHOTOGRAPHY COURSE -->
@@ -339,14 +335,14 @@
 <span class="peek-badge">Course Page</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Education — Course Launch</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Mastering Photography Course Landing Page — Scott Spencer</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Mastering Photography Course Landing Page — Scott Spencer</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Full course landing page built in GHL — hero section, instructor bio, course overview with 6 modules, what you'll get, client testimonials, 3-tier pricing ($69/$99/$179), FAQ, and a final enrollment CTA. 1,000+ students enrolled.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="green">1,000+</span>Students</div>
 <div class="result-item"><span class="green">300+</span>Reviews</div>
 <div class="result-item"><span class="green">99%</span>Satisfaction</div>
 </div>
-<a class="btn-primary" href="case-study-photography.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-photography.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 6. PRECISION AI -->
@@ -357,14 +353,14 @@
 <span class="peek-badge">AI Marketing</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">AI Marketing — Lead Generation</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">AI Marketing Landing Page — Precision AI Growth</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">AI Marketing Landing Page — Precision AI Growth</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Full landing page for an AI marketing agency — hero with 24/7 AI answering agent offer, 4 AI service blocks (market analysis, campaigns, social media, skills training), FAQ, and Google-verified testimonials. Built inside GoHighLevel.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="purple">AI</span>Powered</div>
 <div class="result-item"><span class="purple">24/7</span>Agent</div>
 <div class="result-item"><span class="purple">GHL</span>Built</div>
 </div>
-<a class="btn-primary" href="case-study-precisionai.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-precisionai.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
 </div>
 <!-- 7. PATERNITY LAB -->
@@ -375,14 +371,14 @@
 <span class="peek-badge">Healthcare</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Healthcare — DNA Testing</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">DNA Paternity Testing Landing Page — PaternityLab.com</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">DNA Paternity Testing Landing Page — PaternityLab.com</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Full landing page for a DNA testing lab — hero with order CTA, 4 test types (Home, Immigration, Legal, Prenatal), accreditation badges, lab difference section, local facilities, and client reviews. Built inside GoHighLevel.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="green">99.99%</span>Accuracy</div>
 <div class="result-item"><span class="green">4</span>Test Types</div>
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
-<a class="btn-primary" href="case-study-paternitylab.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-paternitylab.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 8. MOTORCYCLE MASTERY -->
@@ -393,14 +389,14 @@
 <span class="peek-badge">Opt-in Page</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Lead Generation — Opt-in Funnel</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Motorcycle Mastery Free Guide Opt-in Page — Petrolhead</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Motorcycle Mastery Free Guide Opt-in Page — Petrolhead</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Full lead capture opt-in page for a motorcycle training brand — hero with free $97 guide offer, 6 chapter previews, 38K subscriber social proof, author bio, real testimonials, FAQ, and a multi-CTA funnel built inside GoHighLevel.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="green">38K</span>Subscribers</div>
 <div class="result-item"><span class="green">Free</span>Lead Magnet</div>
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
-<a class="btn-primary" href="case-study-motorcycle.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-motorcycle.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 9. COACHING & SPEAKER CONFERENCE -->
@@ -411,14 +407,14 @@
 <span class="peek-badge">Event Page</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Coaching &amp; Events</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Coaching &amp; Speaker Conference Landing Page — Roventa 2025</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Coaching &amp; Speaker Conference Landing Page — Roventa 2025</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Complete event registration page for a global conference — speaker profiles, 3-day schedule, tiered ticket pricing ($99/$199/$399), sponsor showcase, and testimonials built inside GoHighLevel.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="green">3-Day</span>Schedule</div>
 <div class="result-item"><span class="green">Ticket</span>Integrated</div>
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
-<a class="btn-primary" href="case-study-coaching.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-coaching.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 10. BLUE HAWK AUTOMATION -->
@@ -429,14 +425,14 @@
 <span class="peek-badge">Algo Trading</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Finance — Algorithmic Trading</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Blue Hawk Automation — Algorithmic Trading Platform</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Blue Hawk Automation — Algorithmic Trading Platform</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Full website for an Australia-based algo trading company — 5-way opportunity comparison, License &amp; Funded Account services, trading case studies, team profiles, client testimonials, FAQ, and community CTA.</p>
 <div class="pcard-results">
 <div class="result-item"><span>5</span>Opportunity Types</div>
 <div class="result-item"><span>🇦🇺</span>Australia</div>
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
-<a class="btn-primary" href="case-study-bluehawk.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-bluehawk.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 11. TIFFANY THE LENDER -->
@@ -447,14 +443,14 @@
 <span class="peek-badge">Mortgage &amp; Lending</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Real Estate — Mortgage Lending</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Tiffany The Lender — Homeownership &amp; Generational Wealth</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Tiffany The Lender — Homeownership &amp; Generational Wealth</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Premium mortgage landing page — video-led hero, AI chatbot, qualified vs non-qualified mortgage products, family video testimonials, founder bio, 8+ FAQ, and pre-qualification CTA. Black &amp; gold luxury design.</p>
 <div class="pcard-results">
 <div class="result-item"><span>AI</span>Chatbot</div>
 <div class="result-item"><span>2</span>Product Types</div>
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
-<a class="btn-primary" href="case-study-tiffany.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-tiffany.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 12. VITAL VIRTUALS -->
@@ -465,14 +461,14 @@
 <span class="peek-badge">Healthcare</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Healthcare — Virtual Assistants</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Vital Virtuals — Healthcare Virtual Assistant Website</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Vital Virtuals — Healthcare Virtual Assistant Website</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Complete healthcare staffing website — HIPAA-compliant virtual scribes, 70% documentation time reduction, AI vs live scribe comparison table, 4 VA service types, pricing plans, and discovery call booking form.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="green">70%</span>Doc Time Saved</div>
 <div class="result-item"><span>HIPAA</span>Compliant</div>
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
-<a class="btn-primary" href="case-study-vital-virtuals.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-vital-virtuals.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 13. DIGITAL LEAD MARKETING -->
@@ -483,14 +479,14 @@
 <span class="peek-badge">Pricing Page</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Digital Marketing — CRM &amp; Pricing</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Digital Lead Marketing — CRM &amp; Pricing Page</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Digital Lead Marketing — CRM &amp; Pricing Page</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Clean pricing page for a digital marketing agency — DLM Lead Connector CRM at $149/mo with 60-day free trial, Monthly/Yearly toggle, 3-tier ad management plans (Standard/Premium/Professional), and transparent pricing philosophy.</p>
 <div class="pcard-results">
 <div class="result-item"><span>60</span>Day Free Trial</div>
 <div class="result-item"><span>3</span>Service Tiers</div>
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
-<a class="btn-primary" href="case-study-digital-lead-marketing.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-digital-lead-marketing.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 14. TRANSFORMING LIVES DIGITALLY -->
@@ -501,14 +497,14 @@
 <span class="peek-badge">Finance &amp; EdTech</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Finance — Course Platform</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Transforming Lives Digitally — Financial Literacy Platform</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Transforming Lives Digitally — Financial Literacy Platform</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Full AI-powered financial literacy platform — crypto, stocks, and forex learning tracks, 4-tier pricing ($99–$139), AI tools, live workshops, affiliate programme, and a 3-step onboarding flow built inside GoHighLevel.</p>
 <div class="pcard-results">
 <div class="result-item"><span>4</span>Pricing Tiers</div>
 <div class="result-item"><span>AI</span>Integrated</div>
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
-<a class="btn-primary" href="case-study-transforming.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-transforming.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 15. LEGAL LEAD MARKETING -->
@@ -519,14 +515,14 @@
 <span class="peek-badge">Legal / AI</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Legal — AI Marketing &amp; Intake</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Legal Lead — AI Marketing &amp; Intake System for Law Firms</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Legal Lead — AI Marketing &amp; Intake System for Law Firms</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Complete AI-powered marketing and intake system for solo lawyers and SME law firms — AI receptionist, SEO, social media management, reputation monitoring, CRM automation, and 24/7 lead capture.</p>
 <div class="pcard-results">
 <div class="result-item"><span>24/7</span>AI Intake</div>
 <div class="result-item"><span>6</span>Components</div>
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
-<a class="btn-primary" href="case-study-legal-lead.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-legal-lead.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
 </div>
 <!-- 16. PRO STUDIO -->
@@ -537,14 +533,14 @@
 <span class="peek-badge">Real Estate Media</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Real Estate — Media &amp; Photography</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Pro Studio — Architectural-Grade Real Estate Media Website</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Pro Studio — Architectural-Grade Real Estate Media Website</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Premium real estate media website for a Toronto agency — 6 media services (photography, 4K video, 3D Matterport, drone, reels, floor plans), curated packages, real listing showcase, and 24hr delivery promise built inside GoHighLevel.</p>
 <div class="pcard-results">
 <div class="result-item"><span>6</span>Services</div>
 <div class="result-item"><span>24hr</span>Delivery</div>
 <div class="result-item"><span class="green">🇨🇦</span>Toronto</div>
 </div>
-<a class="btn-primary" href="case-study-pro-studio.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-pro-studio.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 17. CLICKUP FUNNELS -->
@@ -555,14 +551,14 @@
 <span class="peek-badge">Sales Funnel</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Coaching — DFY Sales Funnel</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">ClickUp Funnels — DFY Sales Funnel System for Coaches</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">ClickUp Funnels — DFY Sales Funnel System for Coaches</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">100% done-for-you sales funnel landing page for coaches and course creators — offer mapping, copy, funnel design, email automation, tech integration, and 90-day optimisation. Live and converting in 30 days.</p>
 <div class="pcard-results">
 <div class="result-item"><span>DFY</span>Done For You</div>
 <div class="result-item"><span>30</span>Days to Live</div>
 <div class="result-item"><span class="green">24/7</span>Running</div>
 </div>
-<a class="btn-primary" href="case-study-clickup-funnels.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-clickup-funnels.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + CRO Logic</span></div>
 </div>
 <!-- 18. REAL — AGENT RECRUITMENT -->
@@ -573,14 +569,14 @@
 <span class="peek-badge">Agent Recruitment</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">Real Estate — Agent Recruitment</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Real — Top Producing Agent Recruitment Landing Page</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Real — Top Producing Agent Recruitment Landing Page</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">High-converting agent recruitment page — 85% commission splits, Real Academy training stats (114 replays, 350+ hours), 3 value proposition sections, stock rewards video, and 7 consultation CTAs built inside GoHighLevel.</p>
 <div class="pcard-results">
 <div class="result-item"><span>85%</span>Commission Split</div>
 <div class="result-item"><span>350+</span>Training Hours</div>
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
-<a class="btn-primary" href="case-study-real-estate-property.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-real-estate-property.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
 </div>
 <!-- 19. AI AGENT — n8n + OpenAI + SerpAPI -->
@@ -591,14 +587,14 @@
 <span class="peek-badge">n8n + OpenAI</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">AI Automation — n8n</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">AI Agent — OpenAI + SerpAPI + n8n Chat Automation</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">AI Agent — OpenAI + SerpAPI + n8n Chat Automation</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Built an intelligent chat-triggered AI agent in n8n — powered by OpenAI Chat Model with Simple Memory for context retention and SerpAPI for real-time web search. Responds to chat messages autonomously with live data.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="purple">AI</span>Agent</div>
 <div class="result-item"><span class="purple">Live</span>Web Search</div>
 <div class="result-item"><span class="purple">24/7</span>Automated</div>
 </div>
-<a class="btn-primary" href="case-study-ai-agent-n8n.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-ai-agent-n8n.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
 </div>
 <!-- 20. AI EVENT AGGREGATOR — Pabbly + OpenAI -->
@@ -609,14 +605,14 @@
 <span class="peek-badge">Pabbly + OpenAI</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">AI Automation — Pabbly Connect</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">AI Event Aggregator — OpenAI + Pabbly RSS Automation</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">AI Event Aggregator — OpenAI + Pabbly RSS Automation</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Built an automated event aggregation pipeline in Pabbly — RSS feed triggers ChatGPT to process and summarise new items, applies time delays, formats dates across 3 DateTime nodes, and executes API calls to publish results automatically.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="purple">RSS</span>Triggered</div>
 <div class="result-item"><span class="purple">GPT</span>Powered</div>
 <div class="result-item"><span class="purple">Auto</span>Publishing</div>
 </div>
-<a class="btn-primary" href="case-study-ai-event-aggregator.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-ai-event-aggregator.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
 </div>
 <!-- 21. AI LEAD SCORING & EMAIL OUTREACH — n8n -->
@@ -627,14 +623,14 @@
 <span class="peek-badge">n8n + AI</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">AI Automation — n8n</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">AI Lead Scoring &amp; Email Outreach System — n8n</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">AI Lead Scoring &amp; Email Outreach System — n8n</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Complex multi-workflow n8n automation — hourly lead fetch, AI intent classification, personalised email outreach generation, Gmail-based response parsing, lead scoring updates, re-engagement scheduling, and daily analytics reporting. Fully autonomous outreach engine.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="purple">AI</span>Lead Scoring</div>
 <div class="result-item"><span class="purple">Auto</span>Outreach</div>
 <div class="result-item"><span class="purple">Zero</span>Manual Work</div>
 </div>
-<a class="btn-primary" href="case-study-ai-lead-scoring.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-ai-lead-scoring.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
 </div>
 <!-- 22. n8n AI WEBSITE RESEARCH & EMAIL OUTREACH -->
@@ -645,7 +641,7 @@
 <span class="peek-badge">n8n Automation</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">n8n — AI Automation</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">AI-Powered Website Research &amp; Personalized Email Outreach Automation</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">AI-Powered Website Research &amp; Personalized Email Outreach Automation</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Built a full n8n automation — AI reads a prospect's website, crawls sublinks, researches their content, crafts a personalized outreach email using GPT, sends it automatically, and logs everything. Telegram notifications included. Zero manual work.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="purple">AI</span>Researched</div>
@@ -653,7 +649,7 @@
 <div class="result-item"><span class="purple">RAG</span>Agent</div>
 <div class="result-item"><span class="purple">Zero</span>Manual Work</div>
 </div>
-<a class="btn-primary" href="case-study-ai-outreach.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-ai-outreach.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
 </div>
 <!-- 23. n8n GITHUB ISSUE AUTOMATION -->
@@ -664,7 +660,7 @@
 <span class="peek-badge">n8n Automation</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">n8n — GitHub Automation</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">GitHub Issue Management Automation — Auto-Assign &amp; Comment</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">GitHub Issue Management Automation — Auto-Assign &amp; Comment</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Built an n8n workflow triggered by GitHub events — automatically assigns issue creators, detects "I want to work on this" comments, checks if already assigned, assigns the commenter, and adds comments. Zero manual issue management.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="purple">Auto</span>Assign</div>
@@ -672,7 +668,7 @@
 <div class="result-item"><span class="purple">GitHub</span>Integrated</div>
 <div class="result-item"><span class="purple">Zero</span>Manual Work</div>
 </div>
-<a class="btn-primary" href="case-study-github-automation.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-github-automation.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 24. AI ATHLETE PERFORMANCE TRACKING — n8n -->
@@ -683,7 +679,7 @@
 <span class="peek-badge">n8n + AI Agent</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">n8n — AI Performance Tracking</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">AI Athlete Performance Tracking &amp; Weekly Reporting — n8n</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">AI Athlete Performance Tracking &amp; Weekly Reporting — n8n</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Built a full n8n AI automation for athlete coaching — logs training sessions, analyses performance with OpenAI GPT, checks thresholds, sends Slack/email alerts, and delivers weekly per-athlete summaries automatically every week.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="purple">AI</span>Analysis</div>
@@ -691,7 +687,7 @@
 <div class="result-item"><span class="purple">Slack</span>+ Email</div>
 <div class="result-item"><span class="purple">Zero</span>Manual Work</div>
 </div>
-<a class="btn-primary" href="case-study-athlete-performance.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-athlete-performance.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
 </div>
 <!-- 25. GHL STATUS UPDATE WORKFLOW -->
@@ -702,7 +698,7 @@
 <span class="peek-badge">GHL Workflow</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">GoHighLevel — Workflow Automation</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Appointment Status Update Workflow — 6-Branch Pipeline Automation</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Appointment Status Update Workflow — 6-Branch Pipeline Automation</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Built a multi-branch GHL workflow handling 6 appointment outcomes — Unable to Contact, Contacted, No Show, Showed, Sold, and Unqualified. Each branch auto-updates pipeline stage, tags the contact, sends Thank You email + SMS, requests reviews, and nurtures leads. Zero manual work after setup.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="green">6</span>Branch Logic</div>
@@ -710,7 +706,7 @@
 <div class="result-item"><span class="green">SMS</span>+ Email</div>
 <div class="result-item"><span class="green">Zero</span>Manual Work</div>
 </div>
-<a class="btn-primary" href="case-study-ghl-status.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-ghl-status.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + Automation</span></div>
 </div>
 <!-- 25. GHL LEAD NURTURE WORKFLOW -->
@@ -721,7 +717,7 @@
 <span class="peek-badge">GHL Workflow</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">GoHighLevel — Lead Nurture</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">Lead Nurture Workflow — SMS, Email &amp; Video Follow-Up Sequence</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">Lead Nurture Workflow — SMS, Email &amp; Video Follow-Up Sequence</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Built a multi-trigger GHL nurture workflow — fires on form submit, appointment booking, or lead reply. Sends Welcome SMS + Email, waits, checks for reply, then follows up with a video email if no response. Smart branching ends the sequence the moment a lead engages.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="green">3</span>Triggers</div>
@@ -729,7 +725,7 @@
 <div class="result-item"><span class="green">Video</span>Follow-Up</div>
 <div class="result-item"><span class="green">Smart</span>Branching</div>
 </div>
-<a class="btn-primary" href="case-study-ghl-nurture.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-ghl-nurture.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
 </div>
 <!-- 26. AI CHATBOT FOR DIRECTORY PLATFORM (LAST) -->
@@ -740,14 +736,14 @@
 <span class="peek-badge">AI Integration</span></div>
 <div class="pcard-body">
 <div class="pcard-tag">AI Integration</div>
-<h3 style="font-weight:700; margin-bottom:0.8rem;">AI-Powered Business Chatbot for Directory Platform</h3>
+<h3 style="font-weight:700; margin-bottom:0.8rem; color:#111827;">AI-Powered Business Chatbot for Directory Platform</h3>
 <p style="font-size: 0.85rem; color: #6b7280; line-height:1.6;">Custom-trained AI business agent for a client's directory platform — designed to turn website visitors into qualified leads. Each business on the directory gets its own AI assistant trained on their services.</p>
 <div class="pcard-results">
 <div class="result-item"><span class="purple">AI</span>Powered</div>
 <div class="result-item"><span class="purple">24/7</span>Automated</div>
 <div class="result-item"><span class="purple">VIP</span>Lead Flow</div>
 </div>
-<a class="btn-primary" href="case-study-chatbot.html" style="display:inline-block; margin-top:1.5rem; font-size:0.8rem;">View Full Case Study →</a>
+<a class="btn-primary" href="case-study-chatbot.html" style="">View Full Case Study →</a>
 <span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
 </div>
 </div>
