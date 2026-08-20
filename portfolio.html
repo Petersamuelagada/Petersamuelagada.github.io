@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -156,10 +156,80 @@
         .comp-table-wrap::after { content: '← Scroll to see more →'; display: block; text-align: center; font-size: 0.7rem; color: #94a3b8; margin-top: 1rem; font-weight: 600; }
     }
 
+  
+
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.8rem; }
+    .portfolio-card { background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
+    .portfolio-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(27,79,216,0.15); border-color: var(--blue); }
+    .pcard-img { height: 220px; overflow: hidden; position: relative; }
+    .pcard-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.5s ease; }
+    .portfolio-card:hover .pcard-img img { transform: scale(1.05); }
+    .pcard-visual { height: 220px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .pcard-visual-inner { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.8rem; position: relative; z-index: 1; }
+    .pcard-visual-icon { font-size: 3.5rem; }
+    .pcard-visual-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+    .pcard-visual-stats { display: flex; gap: 1.5rem; margin-top: 0.5rem; }
+    .pcard-visual-stat { text-align: center; }
+    .pcard-visual-stat strong { display: block; font-size: 1.3rem; font-weight: 800; color: white; }
+    .pcard-visual-stat span { font-size: 0.7rem; color: rgba(255,255,255,0.7); }
+    .bg-ghl { background: linear-gradient(135deg, #1B4FD8 0%, #0D1117 100%); }
+    .bg-email { background: linear-gradient(135deg, #0D1117 0%, #1B4FD8 60%, #3D6FE8 100%); }
+    .bg-ai { background: linear-gradient(135deg, #6C3FD8 0%, #2D1B8E 100%); }
+    .bg-funnel { background: linear-gradient(135deg, #1440B0 0%, #3D6FE8 100%); }
+    .bg-real { background: linear-gradient(135deg, #0D1117 0%, #1B4FD8 100%); }
+    .bg-health { background: linear-gradient(135deg, #0D7B5E 0%, #1B4FD8 100%); }
+    .bg-coaching { background: linear-gradient(135deg, #0A0F2E 0%, #1B4FD8 100%); }
+    .bg-construction { background: linear-gradient(135deg, #1A0A00 0%, #B45309 100%); }
+    .pcard-visual::before { content: ''; position: absolute; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.05); top: -60px; right: -60px; }
+    .pcard-visual::after { content: ''; position: absolute; width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,0.05); bottom: -30px; left: -30px; }
+    .pcard-overlay { position: absolute; top: 1rem; left: 1rem; z-index: 2; }
+    .pcard-overlay span { background: rgba(255,255,255,0.2); backdrop-filter: blur(8px); color: white; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.72rem; font-weight: 700; border: 1px solid rgba(255,255,255,0.3); }
+    .pcard-body { padding: 1.5rem; }
+    .pcard-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 0.4rem; }
+    .pcard-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.4; color: var(--text); }
+    .pcard-body p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem; }
+    .pcard-results { display: flex; gap: 1.2rem; border-top: 1px solid var(--border); padding-top: 0.9rem; flex-wrap: wrap; }
+    .result-item { font-size: 0.75rem; color: var(--text-muted); }
+    .result-item span { display: block; font-weight: 800; color: var(--blue); font-size: 1rem; }
+    .result-item span.green { color: #16A34A; }
+    .result-item span.purple { color: #6C3FD8; }
+    .result-item span.orange { color: #B45309; }
+    .portfolio-stats { display: flex; gap: 3rem; justify-content: center; padding: 2.5rem 0; margin-bottom: 3rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .pstat { text-align: center; }
+    .pstat strong { display: block; font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--blue); }
+    .pstat span { font-size: 0.82rem; color: var(--text-muted); }
+    @media(max-width:1024px){ .portfolio-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:600px){ .portfolio-grid { grid-template-columns: 1fr; } .portfolio-stats { gap: 1.5rem; } }
   </style>
 </head>
 <body class="js-ready-check">
-None
+<div class="fiverr-bar">
+<p>⭐ <span>5.0 Rated</span> on Fiverr · Trusted by clients across the 🇺🇸 US · 🇬🇧 UK · 🇨🇦 Canada · <a href="https://calendly.com/petersamuellex/government-contract" style="color:#FFD700;text-decoration:underline;" target="_blank">Book Your Free Systems Audit →</a></p>
+</div>
+<header class="navbar" id="navbar">
+<div class="container nav-inner">
+<a class="logo" href="index.html">Samuel<span>Peter</span></a>
+<nav class="nav-links">
+<a class="active" href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+</nav>
+<a class="btn-primary" href="https://calendly.com/petersamuellex/government-contract" target="_blank">Book a Systems Audit</a>
+<button class="hamburger" id="hamburger">☰</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+</div>
+</header>
 <section class="page-hero hero">
 <div class="hero-glow-wrap">
 <div class="hero-glow hero-glow-1"></div>
