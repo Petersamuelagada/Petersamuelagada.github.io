@@ -158,31 +158,49 @@
 
   
 
-    /* --- ULTIMATE VISUAL RESTORATION --- */
+    /* --- FINAL ARCHITECT POLISH --- */
     
-    /* 1. Force Visibility & Stop Overlap */
+    /* 1. Bulletproof Visibility */
     .reveal, .stagger-reveal, .portfolio-card, .h-trust-item, h1, p {
         opacity: 1 !important;
         visibility: visible !important;
         transform: none !important;
     }
-    .fiverr-bar { position: relative !important; z-index: 1001 !important; }
-    .navbar { position: relative !important; top: 0 !important; z-index: 1000 !important; box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important; }
-    
-    /* 2. Professional Hero Visibility */
+
+    /* 2. Professional Header & Topbar */
+    .fiverr-bar { position: relative !important; z-index: 1001 !important; background: #1B4FD8 !important; }
+    .navbar { position: relative !important; top: 0 !important; z-index: 1000 !important; background: white !important; border-bottom: 1px solid #f1f5f9 !important; }
+    .logo { font-weight: 900 !important; font-size: 1.5rem !important; color: #0f172a !important; }
+    .logo span { color: #1B4FD8 !important; }
+
+    /* 3. Executive Hero Upgrade */
     .hero { 
-        background: #f8fafc !important; 
+        background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important; 
         padding: 5rem 0 4rem !important; 
         text-align: center !important;
         position: relative !important;
-        border-bottom: 1px solid #e2e8f0 !important;
+        overflow: hidden !important;
     }
+    
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-image: radial-gradient(#1B4FD8 0.5px, transparent 0.5px);
+        background-size: 25px 25px;
+        opacity: 0.05;
+        z-index: 1;
+    }
+
+    .hero .container { max-width: 900px !important; margin: 0 auto !important; position: relative !important; z-index: 2 !important; }
+
     .hero h1 { 
         color: #0f172a !important; 
         font-size: 3.8rem !important; 
         font-weight: 900 !important; 
         line-height: 1.1 !important; 
         margin-bottom: 1.2rem !important; 
+        letter-spacing: -1px !important;
     }
     .hero h1 em { 
         font-family: 'Playfair Display', serif !important;
@@ -193,58 +211,75 @@
     .hero p { 
         color: #475569 !important; 
         font-size: 1.15rem !important; 
-        max-width: 800px !important;
-        margin: 0 auto 3rem auto !important; 
+        line-height: 1.6 !important;
+        margin-bottom: 2.5rem !important; 
     }
     
-    /* 3. Hero Trust Row */
+    /* Premium Trust Row */
     .hero-trust-row { 
         display: inline-flex !important; 
         justify-content: center !important;
+        align-items: center !important;
         background: white !important;
         padding: 1.2rem 2.5rem !important;
         border-radius: 100px !important;
-        box-shadow: 0 10px 30px rgba(15,23,42,0.05) !important;
+        box-shadow: 0 15px 35px rgba(15,23,42,0.08) !important;
         border: 1px solid #e2e8f0 !important;
         gap: 0 !important;
     }
-    .h-trust-item { padding: 0 2rem !important; border-right: 1px solid #e2e8f0 !important; text-align: center !important; }
+    .h-trust-item { 
+        padding: 0 2rem !important;
+        border-right: 1px solid #e2e8f0 !important;
+        text-align: center !important;
+    }
     .h-trust-item:last-child { border-right: none !important; }
-    .h-trust-item strong { display: block !important; font-size: 1.6rem !important; color: #1B4FD8 !important; font-weight: 800 !important; }
-    .h-trust-item span { font-size: 0.65rem !important; color: #64748b !important; text-transform: uppercase !important; font-weight: 700 !important; letter-spacing: 1px !important; }
+    .h-trust-item strong { 
+        display: block !important;
+        font-size: 1.8rem !important; 
+        color: #1B4FD8 !important; 
+        font-weight: 800 !important;
+    }
+    .h-trust-item span { 
+        font-size: 0.65rem !important; 
+        color: #64748b !important; 
+        text-transform: uppercase !important; 
+        font-weight: 700 !important;
+        letter-spacing: 1px !important;
+    }
 
-    /* 4. RESTORE ORIGINAL IMAGE PRESENTATION */
+    /* 4. UNIFORM & PROFESSIONAL GRID */
     .portfolio-grid { 
         display: grid !important; 
         grid-template-columns: repeat(3, 1fr) !important; 
-        gap: 2rem !important; 
+        gap: 2.5rem !important; 
         margin-top: 4rem !important;
     }
+    
     .portfolio-card { 
         background: white !important; 
         border: 1px solid #e2e8f0 !important; 
-        border-radius: 16px !important; 
+        border-radius: 20px !important; 
         overflow: hidden !important; 
-        transition: all 0.4s ease !important;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
         height: 100% !important;
         display: flex !important;
         flex-direction: column !important;
     }
-    .portfolio-card:hover { transform: translateY(-10px) !important; box-shadow: 0 20px 40px rgba(15,23,42,0.1) !important; border-color: #1B4FD8 !important; }
+    .portfolio-card:hover { transform: translateY(-12px) !important; box-shadow: 0 25px 50px rgba(15,23,42,0.12) !important; border-color: #1B4FD8 !important; }
     
-    /* FIX: Stop tampering with images */
+    /* FIX: Uniform Mockup Display */
     .pcard-img { 
-        height: auto !important; 
-        min-height: 200px !important;
+        height: 250px !important; 
         background: #f8fafc !important; 
         position: relative !important; 
-        padding: 0 !important;
+        overflow: hidden !important;
     }
     .pcard-img img { 
         width: 100% !important; 
-        height: auto !important; 
+        height: 100% !important; 
         display: block !important;
-        object-fit: contain !important; /* Ensure full mockup is visible */
+        object-fit: cover !important; /* Uniform grid look */
+        object-position: top !important;
     }
     
     .peek-badge { 
@@ -253,24 +288,25 @@
         right: 15px !important; 
         background: #1B4FD8 !important; 
         color: white !important; 
-        padding: 4px 12px !important; 
-        border-radius: 20px !important; 
+        padding: 5px 14px !important; 
+        border-radius: 30px !important; 
         font-size: 0.65rem !important; 
         font-weight: 700 !important; 
         text-transform: uppercase !important; 
         z-index: 10 !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
     }
     
     .pcard-body { padding: 2rem !important; flex-grow: 1 !important; display: flex !important; flex-direction: column !important; }
-    .pcard-body h3 { font-weight: 800 !important; margin-bottom: 0.8rem !important; color: #0f172a !important; font-size: 1.1rem !important; }
-    .pcard-body p { font-size: 0.85rem !important; color: #475569 !important; line-height: 1.6 !important; margin-bottom: 1.5rem !important; }
+    .pcard-body h3 { font-weight: 800 !important; margin-bottom: 0.8rem !important; color: #0f172a !important; font-size: 1.15rem !important; line-height: 1.4 !important; }
+    .pcard-body p { font-size: 0.88rem !important; color: #475569 !important; line-height: 1.7 !important; margin-bottom: 1.5rem !important; }
     
     .logic-breakdown { 
         display: block !important; 
         margin-top: auto !important; 
-        padding-top: 1rem !important; 
+        padding-top: 1.2rem !important; 
         border-top: 1px solid #f1f5f9 !important; 
-        font-size: 0.7rem !important; 
+        font-size: 0.72rem !important; 
         color: #1B4FD8 !important; 
         font-weight: 800 !important; 
         text-transform: uppercase !important; 
@@ -280,16 +316,18 @@
     .btn-primary { 
         background: #1B4FD8 !important; 
         color: white !important; 
-        padding: 0.75rem 1.5rem !important; 
-        border-radius: 8px !important; 
+        padding: 0.8rem 1.5rem !important; 
+        border-radius: 10px !important; 
         font-weight: 700 !important; 
         text-decoration: none !important; 
         display: inline-block !important;
-        font-size: 0.8rem !important;
-        margin-bottom: 1rem !important;
+        font-size: 0.82rem !important;
+        margin-bottom: 1.2rem !important;
+        text-align: center !important;
     }
+    .btn-primary:hover { background: #0f172a !important; }
     
-    @media (max-width: 1024px) { .portfolio-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+    @media (max-width: 1100px) { .portfolio-grid { grid-template-columns: repeat(2, 1fr) !important; } }
     @media (max-width: 768px) { .portfolio-grid { grid-template-columns: 1fr !important; } .hero h1 { font-size: 2.8rem !important; } }
 </style>
 </head>
@@ -322,15 +360,21 @@
 </div>
 </header>
 <section class="hero">
+<div class="hero-glow-wrap">
+<div class="hero-glow hero-glow-1"></div>
+<div class="hero-glow hero-glow-2"></div>
+</div>
 <div class="container">
-<div class="section-tag" style="margin-bottom: 1rem; display: inline-block; background: #eef2ff; color: #1B4FD8; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Portfolio</div>
+<div class="reveal">
+<div class="section-tag" style="margin-bottom: 1rem; display: inline-block; background: #eef2ff; color: #1B4FD8; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">The Portfolio</div>
 <h1>Real Work.<br/><em>Real Results.</em></h1>
-<p>I build high-performance GHL ecosystems and complex automation infrastructure for agencies and coaches.</p>
+<p>I architect proprietary systems designed for long-term operational excellence. From complex n8n workflows to high-converting GHL ecosystems.</p>
 <div class="hero-trust-row">
 <div class="h-trust-item"><strong>50+</strong><span>Projects</span></div>
 <div class="h-trust-item"><strong>5.0★</strong><span>Rating</span></div>
 <div class="h-trust-item"><strong>100%</strong><span>Success</span></div>
 <div class="h-trust-item"><strong>3+</strong><span>Years</span></div>
+</div>
 </div>
 </div>
 </section>
