@@ -79,7 +79,17 @@
     .peek-img { width: 100%; height: 200px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; position: relative; }
     .peek-img img { width: 100%; height: 100%; object-fit: cover; }
     .peek-badge { position: absolute; top: 12px; right: 12px; background: #1B4FD8; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-    
+    .logic-breakdown { font-size: 0.75rem; color: #1B4FD8; font-weight: 700; text-transform: uppercase; display: block; margin-top: 1rem; border-top: 1px solid #f3f4f6; padding-top: 0.8rem; }
+
+    .tech-stack-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 3rem; }
+    .tech-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+    .tech-icon { width: 50px; height: 50px; background: white; border-radius: 10px; border: 1px solid #e5e7eb; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.7rem; color: #374151; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+
+    .lead-magnet-card { background: #0f172a; color: white; padding: 3rem; border-radius: 20px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: center; margin-top: 4rem; }
+    .lm-text h3 { color: white; margin-bottom: 1rem; }
+    .lm-form { display: flex; gap: 0.5rem; }
+    .lm-form input { flex: 1; padding: 0.8rem 1rem; border-radius: 8px; border: none; }
+
     .case-study-card { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e5e7eb; border-left: 4px solid #1B4FD8; margin-bottom: 1.5rem; }
     .case-stats { display: flex; gap: 1.5rem; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid #f3f4f6; }
     .case-stat-item { display: flex; flex-direction: column; }
@@ -112,7 +122,7 @@
     .social-links a:hover { background: #1B4FD8; transform: translateY(-3px); }
     .social-links svg { width: 18px; height: 18px; fill: white; }
     
-    @media (max-width: 1024px) { .footer-inner { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+    @media (max-width: 1024px) { .footer-inner { grid-template-columns: 1fr 1fr; gap: 3rem; } .lead-magnet-card { grid-template-columns: 1fr; gap: 2rem; text-align: center; } .lm-form { flex-direction: column; } }
     @media (max-width: 768px) { .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; } .calc-grid { grid-template-columns: 1fr; } .trust-logos { gap: 1.5rem; } }
 
   </style>
@@ -128,7 +138,7 @@
 
   <!-- TOP BAR -->
   <div class="fiverr-bar">
-    <p>⭐ <span>5.0 Rated</span> on Fiverr · Trusted by clients across the 🇺🇸 US · 🇬🇧 UK · 🇨🇦 Canada · <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" style="color:#FFD700;text-decoration:underline;">Book a Free Discovery Call →</a></p>
+    <p>⭐ <span>5.0 Rated</span> on Fiverr · Trusted by clients across the 🇺🇸 US · 🇬🇧 UK · 🇨🇦 Canada · <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" style="color:#FFD700;text-decoration:underline;">Book Your Free Systems Audit →</a></p>
   </div>
 
   <header class="navbar" id="navbar">
@@ -142,7 +152,7 @@
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary">Book a Free Call</a>
+      <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary">Book a Systems Audit</a>
       <button class="hamburger" id="hamburger">&#9776;</button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
@@ -164,7 +174,7 @@
         <h1>I Build <span>High-Performance GHL Systems</span> for Agencies & Coaches.</h1>
         <p class="hero-sub">I help coaches, agencies, and service businesses in the US, UK & Canada stop losing leads — by building CRM automations, email sequences, and sales funnels that work 24/7 without you lifting a finger.</p>
         <div class="hero-btns">
-          <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary">Book a Free Discovery Call</a>
+          <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary">Book Your Free Systems Audit</a>
           <a href="portfolio.html" class="btn-secondary">See My Work</a>
         </div>
         <div class="hero-stats">
@@ -437,6 +447,20 @@
           <p style="font-size:0.85rem; color:#6b7280;">Optimizing for conversion and providing full SOPs for your team.</p>
         </div>
       </div>
+      
+      <div class="section-header" style="margin-top: 5rem;">
+        <div class="section-tag">The Architect's Toolbox</div>
+        <h2>Engineered for <em>Reliability</em></h2>
+      </div>
+      <div class="tech-stack-grid">
+        <div class="tech-item"><div class="tech-icon">GHL</div><span style="font-size:0.7rem;font-weight:700;">GoHighLevel</span></div>
+        <div class="tech-item"><div class="tech-icon">ZAP</div><span style="font-size:0.7rem;font-weight:700;">Zapier</span></div>
+        <div class="tech-item"><div class="tech-icon">MAKE</div><span style="font-size:0.7rem;font-weight:700;">Make.com</span></div>
+        <div class="tech-item"><div class="tech-icon">AI</div><span style="font-size:0.7rem;font-weight:700;">OpenAI/GPT</span></div>
+        <div class="tech-item"><div class="tech-icon">PY</div><span style="font-size:0.7rem;font-weight:700;">Python</span></div>
+        <div class="tech-item"><div class="tech-icon">n8n</div><span style="font-size:0.7rem;font-weight:700;">n8n.io</span></div>
+      </div>
+
     </div>
   </section>
 
@@ -458,6 +482,7 @@
           <div style="padding:2rem;">
             <h4 style="font-weight:700;">Autonomous Outreach Engine</h4>
             <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.8rem; line-height:1.6;">A complex n8n system that fetches leads, scores intent with AI, and sends personalized emails autonomously.</p>
+            <span class="logic-breakdown">Logic: n8n + OpenAI + SerpAPI</span>
           </div>
         </div>
         <div class="peek-card">
@@ -468,6 +493,7 @@
           <div style="padding:2rem;">
             <h4 style="font-weight:700;">AI Legal Intake System</h4>
             <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.8rem; line-height:1.6;">Full-stack AI marketing and intake system for law firms — 24/7 lead capture and CRM automation.</p>
+            <span class="logic-breakdown">Logic: GHL + Custom AI Bot</span>
           </div>
         </div>
         <div class="peek-card">
@@ -478,6 +504,7 @@
           <div style="padding:2rem;">
             <h4 style="font-weight:700;">Multi-Branch Pipeline Logic</h4>
             <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.8rem; line-height:1.6;">Advanced 6-branch GHL workflow that handles every lead outcome automatically without manual input.</p>
+            <span class="logic-breakdown">Logic: Conditional GHL Triggers</span>
           </div>
         </div>
       </div>
@@ -712,12 +739,33 @@
     </div>
   </section>
 
+  
+  <!-- LEAD MAGNET -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="lead-magnet-card">
+        <div class="lm-text">
+          <div class="section-tag light" style="background:rgba(255,255,255,0.1); color:white;">Free Resource</div>
+          <h3>The 7 "Systems Leaks" Killing Agency Growth</h3>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Download my free blueprint on fixing the most common GHL and automation errors that cost high-ticket agencies $10k+ monthly.</p>
+        </div>
+        <div class="lm-form-wrap">
+          <form class="lm-form">
+            <input type="email" placeholder="Enter your business email" required>
+            <button type="submit" class="btn-primary">Get the Blueprint</button>
+          </form>
+          <p style="font-size: 0.7rem; color: #64748b; margin-top: 1rem;">*Join 500+ agency owners receiving my weekly systems tips.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-section">
     <div class="container cta-inner">
       <h2>Let's Fix Your System and<br/>Start Generating Real Results</h2>
       <p>Book a free 30-minute discovery call. No pressure, no pitch — just an honest conversation about your business and what's broken.</p>
       <div class="cta-btns">
-        <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary large">Book a Free Discovery Call</a>
+        <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary large">Book Your Free Systems Audit</a>
         <a href="mailto:petersamuellex@gmail.com" class="btn-white large">Send an Email</a>
       </div>
     </div>
@@ -756,7 +804,7 @@
         <h4>Get In Touch</h4>
         <a href="mailto:petersamuellex@gmail.com">petersamuellex@gmail.com</a>
         <a href="https://wa.me/2348106433379">WhatsApp Me</a>
-        <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary">Book a Free Call</a>
+        <a href="https://calendly.com/petersamuellex/government-contract" target="_blank" class="btn-primary">Book a Systems Audit</a>
       </div>
     </div>
     <div class="footer-bottom">
