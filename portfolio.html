@@ -326,6 +326,22 @@
         display: inline-block !important;
         font-size: 0.82rem !important;
     }
+
+    /* 5. Evidence-first card enhancements */
+    .card-proof-row { display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 1rem !important; margin-top: 1.25rem !important; padding: 0.8rem 0 !important; border-top: 1px solid #eef2f7 !important; border-bottom: 1px solid #eef2f7 !important; }
+    .card-result { color: #0f172a !important; font-size: 0.74rem !important; font-weight: 800 !important; line-height: 1.25 !important; }
+    .card-result small { display: block !important; margin-bottom: 0.2rem !important; color: #64748b !important; font-size: 0.6rem !important; font-weight: 700 !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; }
+    .tech-stack { display: flex !important; flex-wrap: wrap !important; justify-content: flex-end !important; gap: 0.35rem !important; }
+    .tech-badge { display: inline-flex !important; align-items: center !important; gap: 0.28rem !important; padding: 0.28rem 0.45rem !important; border: 1px solid #dbe4f0 !important; border-radius: 999px !important; background: #fff !important; color: #334155 !important; font-size: 0.62rem !important; font-weight: 800 !important; white-space: nowrap !important; }
+    .tech-mark { display: inline-grid !important; place-items: center !important; width: 1rem !important; height: 1rem !important; border-radius: 0.28rem !important; color: #fff !important; font-size: 0.48rem !important; line-height: 1 !important; letter-spacing: -0.03em !important; }
+    .tech-ghl .tech-mark { background: #f2b705 !important; color: #152238 !important; }
+    .tech-n8n .tech-mark { background: #ea4b71 !important; }
+    .tech-openai .tech-mark { background: #111827 !important; }
+    .tech-zapier .tech-mark { background: #ff4f00 !important; }
+    .tech-make .tech-mark { background: #6d28d9 !important; }
+    .tech-api .tech-mark { background: #2563eb !important; }
+    .featured-project { border-color: #9bb8ff !important; box-shadow: 0 18px 40px rgba(27,79,216,0.12) !important; }
+    .featured-project .pcard-img::after { content: 'FLAGSHIP SYSTEM' !important; position: absolute !important; top: 0.9rem !important; left: 0.9rem !important; padding: 0.35rem 0.65rem !important; border-radius: 999px !important; background: #0f172a !important; color: #fff !important; font-size: 0.58rem !important; font-weight: 800 !important; letter-spacing: 0.08em !important; }
     
     @media (max-width: 1100px) { 
         .portfolio-grid { grid-template-columns: repeat(2, 1fr) !important; } 
@@ -414,7 +430,7 @@
 <div class="result-item"><span class="orange">5★</span>Rating</div>
 </div>
 <a class="btn-primary" href="case-study-construction.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + LeadGen Logic</span></div>
+<span class="logic-breakdown">Logic: GHL + CRO Logic</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Lead-generation system</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-make" title="Make"><span aria-hidden="true" class="tech-mark">M</span>Make</span><span class="tech-badge tech-api" title="CRO"><span aria-hidden="true" class="tech-mark">API</span>CRO</span></div></div></div>
 </div>
 <!-- 2. HERBAL HEALTH -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-herbal.html'" style="cursor:pointer;">
@@ -432,7 +448,7 @@
 <div class="result-item"><span>CRO</span>Optimised</div>
 </div>
 <a class="btn-primary" href="case-study-herbal.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + CRO Logic</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Conversion-ready proof</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-make" title="Make"><span aria-hidden="true" class="tech-mark">M</span>Make</span><span class="tech-badge tech-api" title="CRO"><span aria-hidden="true" class="tech-mark">API</span>CRO</span></div></div></div>
 </div>
 <!-- 3. HEALTH CLINIC -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-clinic.html'" style="cursor:pointer;">
@@ -450,7 +466,7 @@
 <div class="result-item"><span>Multi</span>Section</div>
 </div>
 <a class="btn-primary" href="case-study-clinic.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + CRO Logic</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Automated follow-up</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-make" title="Make"><span aria-hidden="true" class="tech-mark">M</span>Make</span><span class="tech-badge tech-api" title="CRO"><span aria-hidden="true" class="tech-mark">API</span>CRO</span></div></div></div>
 </div>
 <!-- 4. REAL ESTATE -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-realestate.html'" style="cursor:pointer;">
@@ -468,7 +484,7 @@
 <div class="result-item"><span>CRM</span>Synced</div>
 </div>
 <a class="btn-primary" href="case-study-realestate.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Lead-generation system</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 5. PHOTOGRAPHY COURSE -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-photography.html'" style="cursor:pointer;">
@@ -486,7 +502,7 @@
 <div class="result-item"><span class="green">99%</span>Satisfaction</div>
 </div>
 <a class="btn-primary" href="case-study-photography.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + CRO Logic</span><div class="card-proof-row"><div class="card-result"><small>Result</small>1,000+ students enrolled</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-make" title="Make"><span aria-hidden="true" class="tech-mark">M</span>Make</span><span class="tech-badge tech-api" title="CRO"><span aria-hidden="true" class="tech-mark">API</span>CRO</span></div></div></div>
 </div>
 <!-- 6. PRECISION AI -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-precisionai.html'" style="cursor:pointer;">
@@ -504,7 +520,7 @@
 <div class="result-item"><span class="purple">GHL</span>Built</div>
 </div>
 <a class="btn-primary" href="case-study-precisionai.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Conversion-ready proof</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 7. PATERNITY LAB -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-paternitylab.html'" style="cursor:pointer;">
@@ -522,7 +538,7 @@
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
 <a class="btn-primary" href="case-study-paternitylab.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + CRO Logic</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Conversion-ready proof</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-make" title="Make"><span aria-hidden="true" class="tech-mark">M</span>Make</span><span class="tech-badge tech-api" title="CRO"><span aria-hidden="true" class="tech-mark">API</span>CRO</span></div></div></div>
 </div>
 <!-- 8. MOTORCYCLE MASTERY -->
 <div class="portfolio-card" data-cat="funnel" onclick="window.location='case-study-motorcycle.html'" style="cursor:pointer;">
@@ -540,7 +556,7 @@
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
 <a class="btn-primary" href="case-study-motorcycle.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>38K subscribers</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 9. COACHING & SPEAKER CONFERENCE -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-coaching.html'" style="cursor:pointer;">
@@ -558,7 +574,7 @@
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
 <a class="btn-primary" href="case-study-coaching.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + CRO Logic</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Conversion-ready proof</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-make" title="Make"><span aria-hidden="true" class="tech-mark">M</span>Make</span><span class="tech-badge tech-api" title="CRO"><span aria-hidden="true" class="tech-mark">API</span>CRO</span></div></div></div>
 </div>
 <!-- 10. BLUE HAWK AUTOMATION -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-bluehawk.html'" style="cursor:pointer;">
@@ -576,7 +592,7 @@
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
 <a class="btn-primary" href="case-study-bluehawk.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + Automation</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Conversion-ready proof</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span></div></div></div>
 </div>
 <!-- 11. TIFFANY THE LENDER -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-tiffany.html'" style="cursor:pointer;">
@@ -594,7 +610,7 @@
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
 <a class="btn-primary" href="case-study-tiffany.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Conversion-ready proof</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 12. VITAL VIRTUALS -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-vital-virtuals.html'" style="cursor:pointer;">
@@ -612,7 +628,7 @@
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
 <a class="btn-primary" href="case-study-vital-virtuals.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>System architecture delivered</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 13. DIGITAL LEAD MARKETING -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-digital-lead-marketing.html'" style="cursor:pointer;">
@@ -630,7 +646,7 @@
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
 <a class="btn-primary" href="case-study-digital-lead-marketing.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + Automation</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Lead-generation system</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span></div></div></div>
 </div>
 <!-- 14. TRANSFORMING LIVES DIGITALLY -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-transforming.html'" style="cursor:pointer;">
@@ -648,7 +664,7 @@
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
 <a class="btn-primary" href="case-study-transforming.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>System architecture delivered</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 15. LEGAL LEAD MARKETING -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-legal-lead.html'" style="cursor:pointer;">
@@ -666,7 +682,7 @@
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
 <a class="btn-primary" href="case-study-legal-lead.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Lead-generation system</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 16. PRO STUDIO -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-pro-studio.html'" style="cursor:pointer;">
@@ -684,7 +700,7 @@
 <div class="result-item"><span class="green">🇨🇦</span>Toronto</div>
 </div>
 <a class="btn-primary" href="case-study-pro-studio.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + Automation</span><div class="card-proof-row"><div class="card-result"><small>Result</small>System architecture delivered</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span></div></div></div>
 </div>
 <!-- 17. CLICKUP FUNNELS -->
 <div class="portfolio-card" data-cat="funnel" onclick="window.location='case-study-clickup-funnels.html'" style="cursor:pointer;">
@@ -702,7 +718,7 @@
 <div class="result-item"><span class="green">24/7</span>Running</div>
 </div>
 <a class="btn-primary" href="case-study-clickup-funnels.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + CRO Logic</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Automated workflow</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 18. REAL — AGENT RECRUITMENT -->
 <div class="portfolio-card" data-cat="landing" onclick="window.location='case-study-real-estate-property.html'" style="cursor:pointer;">
@@ -720,7 +736,7 @@
 <div class="result-item"><span class="green">5★</span>Rating</div>
 </div>
 <a class="btn-primary" href="case-study-real-estate-property.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>System architecture delivered</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 19. AI AGENT — n8n + OpenAI + SerpAPI -->
 <div class="portfolio-card" data-cat="ai" onclick="window.location='case-study-ai-agent-n8n.html'" style="cursor:pointer;">
@@ -738,7 +754,7 @@
 <div class="result-item"><span class="purple">24/7</span>Automated</div>
 </div>
 <a class="btn-primary" href="case-study-ai-agent-n8n.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Automated workflow</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 20. AI EVENT AGGREGATOR — Pabbly + OpenAI -->
 <div class="portfolio-card" data-cat="ai" onclick="window.location='case-study-ai-event-aggregator.html'" style="cursor:pointer;">
@@ -756,10 +772,10 @@
 <div class="result-item"><span class="purple">Auto</span>Publishing</div>
 </div>
 <a class="btn-primary" href="case-study-ai-event-aggregator.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Automated workflow</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 21. AI LEAD SCORING & EMAIL OUTREACH — n8n -->
-<div class="portfolio-card" data-cat="ai" onclick="window.location='case-study-ai-lead-scoring.html'" style="cursor:pointer;">
+<div class="portfolio-card featured-project" data-cat="ai" onclick="window.location='case-study-ai-lead-scoring.html'" style="cursor:pointer;">
 <div class="pcard-img">
 
 <img alt="AI Lead Scoring Email Outreach n8n Workflow" decoding="async" loading="lazy" src="AI-Lead-Scoring-Email-Outreach-n8n.png"/>
@@ -774,7 +790,7 @@
 <div class="result-item"><span class="purple">Zero</span>Manual Work</div>
 </div>
 <a class="btn-primary" href="case-study-ai-lead-scoring.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Lead-generation system</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 22. n8n AI WEBSITE RESEARCH & EMAIL OUTREACH -->
 <div class="portfolio-card" data-cat="ai" onclick="window.location='case-study-ai-outreach.html'" style="cursor:pointer;">
@@ -793,7 +809,7 @@
 <div class="result-item"><span class="purple">Zero</span>Manual Work</div>
 </div>
 <a class="btn-primary" href="case-study-ai-outreach.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Automated workflow</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 23. n8n GITHUB ISSUE AUTOMATION -->
 <div class="portfolio-card" data-cat="ai" onclick="window.location='case-study-github-automation.html'" style="cursor:pointer;">
@@ -812,7 +828,7 @@
 <div class="result-item"><span class="purple">Zero</span>Manual Work</div>
 </div>
 <a class="btn-primary" href="case-study-github-automation.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: n8n + API + Webhooks</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Automated workflow</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-api" title="API"><span aria-hidden="true" class="tech-mark">API</span>API</span></div></div></div>
 </div>
 <!-- 24. AI ATHLETE PERFORMANCE TRACKING — n8n -->
 <div class="portfolio-card" data-cat="ai" onclick="window.location='case-study-athlete-performance.html'" style="cursor:pointer;">
@@ -831,7 +847,7 @@
 <div class="result-item"><span class="purple">Zero</span>Manual Work</div>
 </div>
 <a class="btn-primary" href="case-study-athlete-performance.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Automated workflow</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 25. GHL STATUS UPDATE WORKFLOW -->
 <div class="portfolio-card" data-cat="ghl" onclick="window.location='case-study-ghl-status.html'" style="cursor:pointer;">
@@ -850,7 +866,7 @@
 <div class="result-item"><span class="green">Zero</span>Manual Work</div>
 </div>
 <a class="btn-primary" href="case-study-ghl-status.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + Automation</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Lead-generation system</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 25. GHL LEAD NURTURE WORKFLOW -->
 <div class="portfolio-card" data-cat="ghl" onclick="window.location='case-study-ghl-nurture.html'" style="cursor:pointer;">
@@ -869,7 +885,7 @@
 <div class="result-item"><span class="green">Smart</span>Branching</div>
 </div>
 <a class="btn-primary" href="case-study-ghl-nurture.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Lead-generation system</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 <!-- 26. AI CHATBOT FOR DIRECTORY PLATFORM (LAST) -->
 <div class="portfolio-card" data-cat="ai" onclick="window.location='case-study-chatbot.html'" style="cursor:pointer;">
@@ -887,7 +903,7 @@
 <div class="result-item"><span class="purple">VIP</span>Lead Flow</div>
 </div>
 <a class="btn-primary" href="case-study-chatbot.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;color:var(--blue);font-size:0.82rem;font-weight:700;">View Full Case Study →</a>
-<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span></div>
+<span class="logic-breakdown">Logic: GHL + OpenAI + n8n</span><div class="card-proof-row"><div class="card-result"><small>Result</small>Lead-generation system</div><div aria-label="Technology stack" class="tech-stack"><span class="tech-badge tech-ghl" title="GHL"><span aria-hidden="true" class="tech-mark">GHL</span>GHL</span><span class="tech-badge tech-openai" title="OpenAI"><span aria-hidden="true" class="tech-mark">AI</span>OpenAI</span><span class="tech-badge tech-n8n" title="n8n"><span aria-hidden="true" class="tech-mark">n8n</span>n8n</span></div></div></div>
 </div>
 </div>
 </div>
