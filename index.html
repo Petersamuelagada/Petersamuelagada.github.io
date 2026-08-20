@@ -59,7 +59,6 @@
     .flag-row { display: flex; gap: 0.5rem; justify-content: center; margin-top: 0.5rem; font-size: 1.1rem; }
   
     /* --- Robust Motion Suite --- */
-    /* Content is visible by default. Animations only apply if JS adds the 'js-ready' class to body. */
     .js-ready .reveal { opacity: 0; transform: translateY(30px); }
     .js-ready .stagger-reveal > * { opacity: 0; transform: translateY(20px); }
     
@@ -411,16 +410,6 @@
       </div>
     </div>
   </section>
-
-  <script>
-    function calculateROI() {
-      const leads = document.getElementById('leads').value || 0;
-      const value = document.getElementById('value').value || 0;
-      const rate = (document.getElementById('rate').value || 0) / 100;
-      const lostRevenue = (leads * 0.3) * rate * value;
-      document.getElementById('leak-amount').innerText = '$' + Math.round(lostRevenue).toLocaleString();
-    }
-  </script>
 
   <section class="section bg-light">
     <div class="container">
@@ -932,7 +921,7 @@
   <script src="chatbot.js"></script>
   <script src="exit-popup.js"></script>
 
-  <script>
+  <script defer>
     // Immediate Fail-safe: Check if JS is running
     document.body.classList.add('js-ready');
     
@@ -957,11 +946,11 @@
         });
     };
 
-    // Emergency Reveal after 1.5 seconds (reduced from 3s)
+    // Emergency Reveal after 1.5 seconds
     const animationTimeout = setTimeout(revealAll, 1500);
 
     try {
-        const revealOptions = { threshold: 0.05 }; // Even lower threshold
+        const revealOptions = { threshold: 0.05 };
         const revealObserver = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -1000,6 +989,14 @@
       };
       updateCount();
       target.dataset.counted = "true";
+    }
+
+    function calculateROI() {
+      const leads = document.getElementById('leads').value || 0;
+      const value = document.getElementById('value').value || 0;
+      const rate = (document.getElementById('rate').value || 0) / 100;
+      const lostRevenue = (leads * 0.3) * rate * value;
+      document.getElementById('leak-amount').innerText = '$' + Math.round(lostRevenue).toLocaleString();
     }
     
     // Initial reveal for hero section elements
